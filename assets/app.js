@@ -510,6 +510,23 @@
     var me = $('#snapMeasure'); if (me) me.textContent = s.measure;
   }
 
+  /* Reference films can carry an optional `group`. Consecutive films sharing a
+     group render under one small label — which is what stops a twelve-film
+     pillar reading as an undifferentiated wall. Ungrouped films just render. */
+  function videoGroups(videos) {
+    var groups = [];
+    videos.forEach(function (v) {
+      var name = v.group || '';
+      var last = groups[groups.length - 1];
+      if (last && last.name === name) last.items.push(v);
+      else groups.push({ name: name, items: [v] });
+    });
+    return groups.map(function (g) {
+      return (g.name ? '<p class="vids__group">' + esc(g.name) + '</p>' : '') +
+        '<div class="vids">' + g.items.map(function (v) { return videoSlot(v); }).join('') + '</div>';
+    }).join('');
+  }
+
   function renderPillars() {
     var el = $('#pillars-list');
     if (!el || typeof PILLARS === 'undefined') return;
@@ -558,7 +575,7 @@
         '</div>' +
         (p.note ? '<div class="pflag" data-rv>' + esc(p.note) + '</div>' : '') +
         '<div class="pblock" style="margin-top:26px" data-rv><h4>Reference films</h4>' +
-          '<div class="vids">' + p.videos.map(function (v) { return videoSlot(v); }).join('') + '</div>' +
+          videoGroups(p.videos) +
         '</div></article>';
     }).join('');
   }

@@ -1533,3 +1533,11 @@ p:last-child { margin-bottom: 0; }
   background-color: #0b0b0e;
   background-image: repeating-linear-gradient(45deg, rgba(236,231,221,.028) 0 10px, transparent 10px 20px);
 }
+
+/* Sub-group label inside a pillar's reference films */
+.vids__group {
+  font: 500 11px/1 var(--f-mono); letter-spacing: .2em; text-transform: uppercase;
+  color: var(--beam); margin: 22px 0 10px;
+}
+.vids__group:first-of-type { margin-top: 4px; }
+.frame--light .vids__group { color: var(--brand); }

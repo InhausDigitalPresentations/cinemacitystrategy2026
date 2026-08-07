@@ -69,7 +69,9 @@ Set Drive sharing to **"Anyone with the link"** or the embed will show a permiss
 
 **Behaviour:** nothing autoplays and nothing preloads — videos load only when clicked. That is deliberate: an autoplaying video in a client meeting is a disaster, and preloading twelve films would make the page crawl. If an embed fails, the frame keeps its shape and shows the error rather than collapsing.
 
-**As built:** fifteen reference films, all live Google Drive links, all vertical 9:16 — Movies First 4 · Location & Experience 4 · Entertainment & Culture 3 · People & Moments 2 · Creator Seeding 2. No empty slots remain.
+**As built:** twenty-three reference films, all live Google Drive links, all vertical 9:16 — Movies First 4 · Location & Experience 12 · Entertainment & Culture 3 · People & Moments 2 · Creator Seeding 2. No empty slots remain.
+
+A film can carry an optional `group` field. Consecutive films sharing a group render under one small label, which is what keeps the twelve-film Location & Experience pillar from reading as an undifferentiated wall — it splits into Location (7), The experience (3) and Food (2). Films without a group just render straight into the grid.
 
 Poster frames come from Drive's own thumbnail endpoint (`drive.google.com/thumbnail?id=…&sz=w480`), so they need a network connection. If one fails the frame keeps its shape and shows the play button on a textured bed — nothing breaks.
 
