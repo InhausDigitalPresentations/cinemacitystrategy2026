@@ -1444,3 +1444,92 @@ p:last-child { margin-bottom: 0; }
 
 /* Chart legend swatch for the brand series */
 .lg i.brand { background: var(--brand-lt); }
+
+/* ============================================================================
+   39. THE VISUAL SYSTEM IN ACTION — FINISHED WORK
+   ----------------------------------------------------------------------------
+   The masonry contact sheet existed to hold mixed-ratio placeholders. These are
+   four finished 4:5 feed posts, so a plain two-up grid is both simpler and
+   better: at this width each design sits larger than life size, which is what
+   a proof-of-concept needs — you can read the type rather than squint at it.
+   ========================================================================= */
+#visualExamples {
+  display: grid;
+  column-count: unset;
+  grid-template-columns: 1fr;
+  gap: clamp(18px, 2.4vw, 34px);
+}
+@media (min-width: 760px) { #visualExamples { grid-template-columns: repeat(2, 1fr); } }
+
+#visualExamples .vscard {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  break-inside: auto;
+}
+#visualExamples .vscard__media {
+  border: 1px solid var(--line-2);
+  border-radius: var(--r);
+  background: var(--ink-2);
+}
+#visualExamples .vscard--hero { border: 0; }
+#visualExamples .vscard--hero .vscard__media { border-color: rgba(240,177,82,.3); }
+
+.vscard__name {
+  font-family: var(--f-serif);
+  font-size: clamp(19px, 1.9vw, 25px);
+  line-height: 1.15;
+  color: var(--txt);
+  margin-bottom: 2px;
+}
+.frame--light .vscard__name { color: var(--bone-ink); }
+#visualExamples .vscard__meta { padding: 15px 2px 4px; gap: 7px; }
+#visualExamples .vscard__r { font-size: 14.5px; line-height: 1.55; max-width: 52ch; }
+
+/* Corner marks belong on an empty slot, not on finished artwork */
+#visualExamples .vscard__corner { display: none; }
+
+/* Neutralise the legacy spanning rule inside the finished-work grid */
+#visualExamples .vscard--hero { grid-column: auto; }
+
+/* ============================================================================
+   40. REFERENCE FILMS — REAL FOOTAGE
+   ----------------------------------------------------------------------------
+   Every slot is filled and every film is vertical, so the grid is fixed rather
+   than auto-fit. With auto-fit, a pillar holding two films stretched them to
+   twice the size of a pillar holding four — fixed columns keep every reference
+   the same size all the way down the chapter, and a short row simply leaves
+   space, which reads as deliberate.
+   ========================================================================= */
+.vids {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 20px);
+}
+@media (max-width: 1080px) { .vids { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px)  { .vids { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Vertical, always — these are 9:16 films and the frame should say so */
+.vslot__media { aspect-ratio: 9 / 16; }
+.vslot--wide .vslot__media { aspect-ratio: 9 / 16; }
+
+/* Drive's player letterboxes inside its own chrome; a black bed keeps that
+   from reading as a rendering fault */
+.vslot__media iframe { background: #000; border: 0; }
+
+/* Poster frames come from Drive, so dim them until played */
+.vslot__play img { opacity: .82; transition: opacity .3s var(--ease); }
+.vslot__play:hover img, .vslot__play:focus-visible img { opacity: 1; }
+
+/* <figure> carries a UA default of `margin: 1em 40px`. The gallery cards had
+   this reset; the video slots never did, so each one sat 80px narrower than
+   its grid column. Reset both explicitly so neither can drift again. */
+.vslot, .vscard { margin: 0; }
+
+/* Poster frames are fetched from Drive, so they need a network. Give the media
+   a textured bed underneath: when the poster loads it covers this completely,
+   and when it can't the frame still reads as a designed slot rather than a
+   rendering fault. */
+.vslot__media {
+  background-color: #0b0b0e;
+  background-image: repeating-linear-gradient(45deg, rgba(236,231,221,.028) 0 10px, transparent 10px 20px);
+}

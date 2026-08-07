@@ -428,8 +428,22 @@ const PILLARS = [
     measurement: 'Saves on The Line-Up · reach in release weeks · link taps during opening windows · reach in weeks two and three.',
     note: 'Cinemacity sits closer to film content than any comparable exhibitor in this market, and social has never used that. Being the first account in the UAE to post a piece of film material rather than the fifth is a real and repeatable advantage. Worth mapping exactly what that access allows before we build formats on it.',
     videos: [
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+      { title: 'Distributor content 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1loIH9DOXyuj8TiXU61T-Cs_obcenjf8G&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1loIH9DOXyuj8TiXU61T-Cs_obcenjf8G/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Distributor content 02', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1SfStqu25mFuT89WOrRJ_dcsJxXXoCSRR&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1SfStqu25mFuT89WOrRJ_dcsJxXXoCSRR/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Distributor content 03', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1KZGrFwE7FatdrWI46f6DqL0sAb5BnCyq&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1KZGrFwE7FatdrWI46f6DqL0sAb5BnCyq/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Distributor content 04', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1F5gKDmSsrN7uaR-eRlLBOMBWBc-Fu51G&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1F5gKDmSsrN7uaR-eRlLBOMBWBc-Fu51G/view?usp=sharing',
+        externalUrl: '' }
     ]
   },
   {
@@ -457,10 +471,22 @@ const PILLARS = [
     platforms: 'Instagram leads for the food. TikTok leads for the rooms, because that is what people search. YouTube for the long-form venue films.',
     measurement: 'Saves per post · TikTok search share · traffic to location and menu pages · shares on food content.',
     videos: [
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Long form · 16:9', platform: 'YouTube', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+      { title: 'Location — TikTok', description: '', format: 'Vertical · 9:16', platform: 'TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1o8sfvRP-VtP3V5W0VWHi3nLA_mJQCqQm&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1o8sfvRP-VtP3V5W0VWHi3nLA_mJQCqQm/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Location — Instagram', description: '', format: 'Vertical · 9:16', platform: 'Instagram Reels', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1XD6-C7Cnr6BdIVkDH9jYBwMt7QpK96od&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1XD6-C7Cnr6BdIVkDH9jYBwMt7QpK96od/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Location 03', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1-KFg2f9BMI6BvXBHdDqV6-GcNyf21utx&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1-KFg2f9BMI6BvXBHdDqV6-GcNyf21utx/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'The experience', description: '', format: 'Vertical · 9:16', platform: 'Instagram Reels', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=13cI3tNJG4pBBP_ItLQs2U39IU_hKlTs-&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/13cI3tNJG4pBBP_ItLQs2U39IU_hKlTs-/view?usp=sharing',
+        externalUrl: '' }
     ]
   },
   {
@@ -487,8 +513,18 @@ const PILLARS = [
     platforms: 'Instagram for the rulebook and the stills. TikTok for the performed version. The most shareable pillar in the system.',
     measurement: 'Shares and saves · reach from non-followers · comments · share of monthly reach in weeks with no major release.',
     videos: [
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+      { title: 'Pop culture 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=14lsn0QhdiXT5VtKPi37XbtGvcVxFpyFk&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/14lsn0QhdiXT5VtKPi37XbtGvcVxFpyFk/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Pop culture 02', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1tuGR-XC33p5uDzV-_XwHC2SF0YHzD8hX&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1tuGR-XC33p5uDzV-_XwHC2SF0YHzD8hX/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Pop culture 03', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1nm-BCfOIY1OC2Stnv2BKrna0I527kj9i&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1nm-BCfOIY1OC2Stnv2BKrna0I527kj9i/view?usp=sharing',
+        externalUrl: '' }
     ]
   },
   {
@@ -515,8 +551,14 @@ const PILLARS = [
     platforms: 'TikTok and Instagram Reels equally. Stories for the live moments. Snapchat carries the same energy in its own way.',
     measurement: 'Comments and sentiment · shares · saves · participation in reactive formats · reach from non-followers.',
     videos: [
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+      { title: 'People & moments 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1g-0lCkNwvIUv2UeDtXKhyTrYOpLML6Pe&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1g-0lCkNwvIUv2UeDtXKhyTrYOpLML6Pe/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'People & moments 02', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1unwAq4SnfE6AIx8jkYdF_f9PuNooynOY&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1unwAq4SnfE6AIx8jkYdF_f9PuNooynOY/view?usp=sharing',
+        externalUrl: '' }
     ]
   },
   {
@@ -543,8 +585,14 @@ const PILLARS = [
     platforms: 'TikTok first, with Instagram as secondary usage where rights allow. Spotlight on Snapchat for the best of it.',
     measurement: 'Cost per landing-page view against paid benchmarks · creator-attributed link taps · content longevity · repeat-collaboration rate.',
     videos: [
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: 'OPTIONAL_CREATOR_NAME', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
-      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: 'OPTIONAL_CREATOR_NAME', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+      { title: 'Creator seeding 01', description: '', format: 'Vertical · 9:16', platform: 'TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=16UjuXuSkylsACv63wsmf5au6A_qLjui-&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/16UjuXuSkylsACv63wsmf5au6A_qLjui-/view?usp=sharing',
+        externalUrl: '' },
+      { title: 'Creator seeding 02', description: '', format: 'Vertical · 9:16', platform: 'TikTok', credit: '',
+        thumbnail: 'https://drive.google.com/thumbnail?id=1YlYt4Sey_oFr33k9OlKKaaqjGqeQFAWQ&sz=w480',
+        driveUrl: 'https://drive.google.com/file/d/1YlYt4Sey_oFr33k9OlKKaaqjGqeQFAWQ/view?usp=sharing',
+        externalUrl: '' }
     ]
   }
 ];
@@ -732,16 +780,54 @@ const VISUAL_PRINCIPLES = [
 ];
 
 const VISUAL_SYSTEM_EXAMPLES = [
-  { id: 'hero-campaign',  title: 'HERO_DESIGN_EXAMPLE',      type: 'image', platform: 'Instagram', format: '4:5 feed post', aspectRatio: '4 / 5',  pillar: 'The Room',       assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'The system at full strength — room named, frame applied, type doing the work.' },
-  { id: 'feed-preview',   title: 'INSTAGRAM_FEED_PREVIEW',   type: 'image', platform: 'Instagram', format: '3×3 grid',      aspectRatio: '1 / 1',  pillar: 'All pillars',    assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Nine posts reading as one brand across five different pillars.' },
-  { id: 'food',           title: 'FOOD_DESIGN_EXAMPLE',      type: 'image', platform: 'Instagram', format: '4:5 feed post', aspectRatio: '4 / 5',  pillar: 'The Late Show',  assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Food shot like a restaurant would shoot it.' },
-  { id: 'carousel',       title: 'CAROUSEL_DESIGN_EXAMPLE',  type: 'image', platform: 'Instagram', format: '4:5 carousel',  aspectRatio: '4 / 5',  pillar: 'First Look',     assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'The Line-Up — the saveable utility format.' },
-  { id: 'story',          title: 'STORY_DESIGN_EXAMPLE',     type: 'image', platform: 'Stories',   format: '9:16 story',    aspectRatio: '9 / 16', pillar: 'Second Weekend', assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Link sticker treatment — the booking surface.' },
-  { id: 'reel-cover',     title: 'REEL_COVER_EXAMPLE',       type: 'image', platform: 'Instagram', format: '9:16 cover',    aspectRatio: '9 / 16', pillar: 'The Late Show',  assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Covers designed as a grid system, not an afterthought.' },
-  { id: 'tiktok-frame',   title: 'TIKTOK_FRAME_EXAMPLE',     type: 'image', platform: 'TikTok',    format: '9:16 frame',    aspectRatio: '9 / 16', pillar: 'The Room',       assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'On-screen text built for search as well as for reading.' },
-  { id: 'house-rules',    title: 'CONTENT_PILLAR_DESIGN',    type: 'image', platform: 'Instagram', format: '1:1 static',    aspectRatio: '1 / 1',  pillar: 'House Rules',    assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Type only, no image. Proof the system holds with nothing else.' },
-  { id: 'motion',         title: 'MOTION_DESIGN_VIDEO',      type: 'video', platform: 'Instagram Reels', format: '9:16 motion', aspectRatio: '9 / 16', pillar: 'The Room', assetUrl: '', thumbnailUrl: '', description: 'MOTION_DESCRIPTION', rationale: 'Frame-edge motion language and the venue-name reveal.' },
-  { id: 'adaptation',     title: 'PAID_MEDIA_ADAPTATION',    type: 'image', platform: 'Meta / TikTok', format: '1:1 + 9:16', aspectRatio: '1 / 1', pillar: 'First Look',     assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'One idea across feed, story and paid without redrawing it.' }
+  {
+    id: 'find-your-cinemacity',
+    title: 'Find Your Cinemacity',
+    type: 'image',
+    platform: 'Instagram',
+    format: '4:5 feed post',
+    aspectRatio: '4 / 5',
+    pillar: 'Location & Experience',
+    assetUrl: 'assets/img/dsg-find.webp',
+    alt: 'Find Your Cinemacity — an empty auditorium with all six venue names set across the frame',
+    rationale: 'The umbrella. Six venues named on one frame, so the estate reads as one brand containing six different nights rather than six separate cinemas.'
+  },
+  {
+    id: 'starlight',
+    title: 'Starlight',
+    type: 'image',
+    platform: 'Instagram',
+    format: '4:5 feed post',
+    aspectRatio: '4 / 5',
+    pillar: 'Location & Experience',
+    assetUrl: 'assets/img/dsg-starlight.webp',
+    alt: 'Starlight — red recliners and a lit table in the Cinemacity Starlight auditorium',
+    rationale: 'A room sold entirely on its own terms — the light, the recliner, the service. There is no film anywhere in the frame, which is the whole argument.'
+  },
+  {
+    id: 'fountain-views',
+    title: 'Fountain Views',
+    type: 'image',
+    platform: 'Instagram',
+    format: '4:5 feed post',
+    aspectRatio: '4 / 5',
+    pillar: 'Location & Experience',
+    assetUrl: 'assets/img/dsg-fountain.webp',
+    alt: 'Fountain Views — a served food tray resting on a blue velvet cinema recliner',
+    rationale: 'Food shot the way a restaurant would shoot it, on the seat it is actually served to. This is the F&B half of the pillar in a single image.'
+  },
+  {
+    id: 'horrors-greatest-hits',
+    title: 'Horror’s Greatest Hits',
+    type: 'image',
+    platform: 'Instagram',
+    format: '4:5 feed post',
+    aspectRatio: '4 / 5',
+    pillar: 'Movies First',
+    assetUrl: 'assets/img/dsg-horror.webp',
+    alt: 'Horror’s Greatest Hits — a misted house and lone figure, set for a seasonal season of films',
+    rationale: 'Programming as a reason to come rather than a listing. Proof the system can carry a seasonal idea without a distributor asset in sight.'
+  }
 ];
 
 

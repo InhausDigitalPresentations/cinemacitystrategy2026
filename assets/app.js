@@ -634,8 +634,10 @@
     }
     var g = $('#visualExamples');
     if (g && typeof VISUAL_SYSTEM_EXAMPLES !== 'undefined') {
-      g.innerHTML = VISUAL_SYSTEM_EXAMPLES.map(function (x, i) {
-        return assetCard(x, i === 0 || i === 1);
+      /* No hero emphasis here: these are four finished pieces of equal
+         standing, and a spanning card would only break the grid. */
+      g.innerHTML = VISUAL_SYSTEM_EXAMPLES.map(function (x) {
+        return assetCard(x, false);
       }).join('');
     }
   }
@@ -654,7 +656,7 @@
           '<i><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M0 0l12 7-12 7z"/></svg></i></button>'
         : placeholder(x, ratio);
     } else if (filled) {
-      media = '<img src="' + esc(x.assetUrl) + '" alt="' + esc(x.rationale || x.title) + '" loading="lazy">';
+      media = '<img src="' + esc(x.assetUrl) + '" alt="' + esc(x.alt || x.title) + '" loading="lazy" decoding="async">';
     } else {
       media = placeholder(x, ratio);
     }
@@ -670,6 +672,7 @@
         '<span class="vscard__corner vscard__corner--br" aria-hidden="true"></span>' +
       '</div>' +
       '<figcaption class="vscard__meta">' +
+        (x.title && !isToken(x.title) ? '<span class="vscard__name">' + esc(x.title) + '</span>' : '') +
         (x.rationale ? '<span class="vscard__r">' + esc(x.rationale) + '</span>' : '') +
         (tags.length ? '<span class="vscard__tags">' + tags.map(function (t) {
           return '<span class="vslot__tag">' + esc(t) + '</span>';

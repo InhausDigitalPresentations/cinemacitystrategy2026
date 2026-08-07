@@ -8,7 +8,7 @@ Prepared by INHAUS Digital, August 2026.
 ## Two ways to open it
 
 **`Cinemacity-Strategy-2026-27.html`** (single file, 1.8 MB)
-Everything inlined — CSS, JavaScript, all eleven font files and all nine photographs as data URIs. Zero external requests. Double-click it, email it, put it on a USB stick, present it on a plane. This is the one to send to the client.
+Everything inlined — CSS, JavaScript, all eleven font files and all thirteen images as data URIs. Zero external requests. Double-click it, email it, put it on a USB stick, present it on a plane. This is the one to send to the client.
 
 **`cinemacity-2026/index.html`** (source folder)
 The editable version. Same output, split into readable files. Double-clicking works here too — the scripts are classic (non-module) precisely so `file://` doesn't break. Also fine on any static host: Netlify, Vercel, S3, a plain folder on a server.
@@ -29,7 +29,7 @@ cinemacity-2026/
     ├── fonts.css           @font-face declarations.
     ├── app.js              Rendering + navigation. Rarely needs touching.
     ├── fonts/              Albra Text + PP Monument, subset WOFF2, 145 KB.
-    └── img/                Backgrounds + Cinemacity photography, WebP, 593 KB total.
+    └── img/                Backgrounds, photography and the four final designs, WebP, 961 KB.
 ```
 
 **The split, and why:** repeating components — pillars, reference films, design examples, platforms, metrics, the timeline, the calendar — are generated from data in `content.js`, so there is no duplicated markup to keep in sync. The narrative frames stay as HTML because each one is a one-off composition, and abstracting those into a config would make them harder to edit, not easier.
@@ -69,33 +69,36 @@ Set Drive sharing to **"Anyone with the link"** or the embed will show a permiss
 
 **Behaviour:** nothing autoplays and nothing preloads — videos load only when clicked. That is deliberate: an autoplaying video in a client meeting is a disaster, and preloading twelve films would make the page crawl. If an embed fails, the frame keeps its shape and shows the error rather than collapsing.
 
-**Slots as built:** Movies First 2 · Location & Experience 4 · Entertainment & Culture 2 · People & Moments 2 · Creator Seeding 2. Add or remove entries freely — the grid reflows.
+**As built:** fifteen reference films, all live Google Drive links, all vertical 9:16 — Movies First 4 · Location & Experience 4 · Entertainment & Culture 3 · People & Moments 2 · Creator Seeding 2. No empty slots remain.
 
-Unfilled slots render as a clean frame showing only the aspect ratio and a quiet "Reference film" label — the raw token stays in `content.js` where it belongs, so the deck is presentable even before the films are in.
+Poster frames come from Drive's own thumbnail endpoint (`drive.google.com/thumbnail?id=…&sz=w480`), so they need a network connection. If one fails the frame keeps its shape and shows the play button on a textured bed — nothing breaks.
+
+The grid is fixed at four columns rather than auto-fit, so a pillar with two films shows them at the same size as a pillar with four. A short row simply leaves space.
 
 ---
 
-## Adding the design examples
+## The design examples
 
-Same principle, in `VISUAL_SYSTEM_EXAMPLES[]`:
+`VISUAL_SYSTEM_EXAMPLES[]` now holds four finished 4:5 feed posts — Find Your Cinemacity, Starlight, Fountain Views and Horror's Greatest Hits. All empty placeholders have been removed from the section.
+
+To add another:
 
 ```js
 {
-  id: 'hero-campaign',
-  title: 'HERO_DESIGN_EXAMPLE',      // internal reference only, not shown
+  id: 'new-piece',
+  title: 'Shown above the rationale',
   type: 'image',                      // or 'video'
   platform: 'Instagram',
   format: '4:5 feed post',
   aspectRatio: '4 / 5',               // drives the frame — no cropping
-  pillar: 'The Room',
-  assetUrl: '',                       // ← the only field you must fill
-  thumbnailUrl: '',                   // videos only
-  description: 'DESIGN_DESCRIPTION',
+  pillar: 'Movies First',
+  assetUrl: 'assets/img/dsg-new.webp',
+  alt: 'Description for screen readers',
   rationale: 'What this proves about the system.'
 }
 ```
 
-Set `assetUrl` and the placeholder is replaced. Nothing else changes. Vertical (9:16), portrait (4:5), square (1:1) and landscape (16:9) all sit correctly in the same contact sheet because each card gets a real `aspect-ratio` container — no forced crops, no squashing.
+The gallery is a two-up grid, so it reads best with an even number. Mixed aspect ratios still work — each card gets a real `aspect-ratio` container, nothing is cropped to fit — but four matched 4:5 posts is what it is tuned for.
 
 ---
 
@@ -105,13 +108,9 @@ Every unfilled slot is deliberately visible and labelled. Search for these:
 
 | Token | Where | What it needs |
 |---|---|---|
-| `GOOGLE_DRIVE_VIDEO_URL` | 12 reference-film slots | Drive links |
-| `VIDEO_TITLE` / `VIDEO_DESCRIPTION` | 12 reference-film slots | Captions |
-| `VIDEO_THUMBNAIL_URL` | 12 reference-film slots | Optional posters |
-| `DESIGN_ASSET_URL` | 10 gallery slots | Final artwork |
-| `DESIGN_DESCRIPTION` | 10 gallery slots | One line each |
 
-None of these tokens are visible on screen. Unfilled slots show a designed frame with the expected ratio, so the deck presents cleanly as it is — and replacing them requires no design work.
+
+The design gallery has no placeholders left — all four pieces are final artwork. None of the video tokens are visible on screen either; unfilled reference-film slots show a designed frame with the expected ratio.
 
 ---
 
