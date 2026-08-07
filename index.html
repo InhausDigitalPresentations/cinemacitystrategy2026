@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinemacity · The Room Makes The Movie · Social Media Strategy 2026–27</title>
+<meta name="description" content="Cinemacity social media and content strategy 2026–27. Prepared by INHAUS Digital.">
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Typefaces are bundled locally so the deck never depends on wifi in a meeting.
+     No preload hints: fonts are always fetched in CORS mode, which fails on
+     file:// — and this deck must work when opened by double-clicking. -->
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/strategy.css">
+</head>
+<body>
+
+<a class="skip-link" href="#cold-open">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<div class="rail" aria-hidden="true">
+  <span class="rail__now" id="railNow">FRAME 00</span>
+  <span class="rail__reel" id="railReel">REEL 01</span>
+</div>
+
+<div class="chrome">
+  <div class="chrome__slug" id="chromeSlug" aria-hidden="true"></div>
+  <button class="idx-btn" id="idxOpen" aria-expanded="false" aria-controls="indexPanel">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+      <path d="M1 3h14M1 8h14M1 13h14"/>
+    </svg>
+    Index
+  </button>
+</div>
+
+<nav class="index" id="indexPanel" data-open="false" aria-label="Presentation index" aria-hidden="true">
+  <button class="index__close" id="idxClose" aria-label="Close index">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l12 12M14 2L2 14"/></svg>
+  </button>
+  <div class="index__grid" id="indexGrid"></div>
+</nav>
+
+<main id="main">
+
+<!-- ════════════════════════════════════════════ REEL 01 · WHERE WE ARE ══ -->
+
+<section class="frame cold frame--bg" id="cold-open" data-reel="01" data-frame="00" data-label="Cold open">
+    <div class="framebg" data-parallax aria-hidden="true">
+      <img src="assets/img/bg-projector.webp" alt="" loading="eager" decoding="async">
+      <!-- Projector light: a cone from the lens, gate flicker, and drifting haze.
+           Purely decorative, sits above the scrim, dies under reduced-motion. -->
+      <span class="beam" aria-hidden="true">
+        <span class="beam__cone"></span>
+        <span class="beam__cone beam__cone--2"></span>
+        <span class="beam__glow"></span>
+        <span class="beam__haze"></span>
+      </span>
+    </div>
+  <div class="frame__inner">
+    <p class="cold__agency">Prepared by INHAUS Digital · August 2026</p>
+    <p class="cold__brand">Cinemacity</p>
+    <h1 class="cold__title">The Room<br>Makes The <em>Movie</em></h1>
+    <p class="cold__sub">Social media and content strategy, 2026–27.</p>
+    <div class="cold__foot">
+      <span>Six chapters</span>
+      <span>Scroll, or use ↑ ↓</span>
+    </div>
+    <span class="scrollcue" aria-hidden="true"><i></i> Begin</span>
+  </div>
+</section>
+
+<!-- 01 · IN ONE PAGE -->
+<section class="frame" id="summary" data-reel="01" data-frame="01" data-label="In one page">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">01</span><span>Where We Are</span></div>
+    <p class="eyebrow" data-rv>In one page</p>
+    <h2 class="fh" data-rv>The strategy, before the detail</h2>
+
+    <div class="sumgrid" data-rv>
+      <div class="sumcell">
+        <p class="sumcell__k">Where we are</p>
+        <p>Seven million views in seven months. Reach is not the problem — <strong>the account can put Cinemacity in front of very large audiences.</strong> What it has not yet done is give those audiences a clear reason to choose Cinemacity over anywhere else.</p>
+      </div>
+      <div class="sumcell">
+        <p class="sumcell__k">The insight</p>
+        <p>People decide what to watch long before they open Instagram. <strong>What they have not decided is where.</strong> That choice is made late, usually with someone else, and almost nobody is arguing for it.</p>
+      </div>
+      <div class="sumcell">
+        <p class="sumcell__k">The idea</p>
+        <p><strong>The room makes the movie.</strong> Sharjah’s only IMAX. Abu Dhabi’s largest screen. The country’s only licensed auditorium. Real kitchens and real bars. Cinemacity has rooms nobody else has — so we make the rooms the story.</p>
+      </div>
+      <div class="sumcell">
+        <p class="sumcell__k">The work</p>
+        <p>Five pillars — <strong>Movies First, Location &amp; Experience, Entertainment &amp; Culture, People &amp; Moments and Creator Seeding</strong> — with fifteen recurring formats behind them and a defined weekly volume per platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · WHAT WE HAVE LEARNED -->
+<section class="frame" id="learned" data-reel="01" data-frame="02" data-label="What we have learned">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">02</span><span>Where We Are</span></div>
+    <p class="eyebrow" data-rv>What we have learned</p>
+    <h2 class="fh" data-rv>Twelve months of data, four things worth acting on</h2>
+
+    <div class="g g-4" id="learnedGrid" style="margin-top:clamp(26px,4vh,44px)"></div>
+    <p class="note" data-rv id="learnedSource"></p>
+
+    <div class="split" style="margin-top:clamp(40px,7vh,72px)">
+      <div data-rv>
+        <h3 class="sh">Search is where the growth is</h3>
+        <p class="lead" style="font-size:16.5px">People are typing formats, locations and film titles to find us. That is intent, and it is compounding.</p>
+        <div class="chart"><div class="chart__rows" id="searchChart"></div></div>
+        <p class="note" id="searchNote"></p>
+      </div>
+      <div data-rv data-d="1">
+        <h3 class="sh">Monthly views</h3>
+        <p class="lead" style="font-size:16.5px">Reach follows the release slate. July was the strongest month on record, driven by an original post rather than a film.</p>
+        <div class="chart"><div class="chart__rows" id="trendChart"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02b · WHAT THE CONTENT SAYS -->
+<section class="frame frame--light" id="content-proof" data-reel="01" data-frame="02" data-label="What the content tells us">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">02</span><span>Where We Are</span></div>
+    <p class="eyebrow" data-rv>What the content tells us</p>
+    <h2 class="fh" data-rv id="proofHead"></h2>
+    <div class="tbl-wrap" data-rv><table class="tbl" id="proofTable"></table></div>
+    <p class="lead" data-rv id="proofReading" style="margin-top:26px"></p>
+  </div>
+</section>
+
+<!-- 03 · THE MARKET -->
+<section class="frame" id="context" data-reel="01" data-frame="03" data-label="The market around us">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">03</span><span>Where We Are</span></div>
+    <p class="eyebrow" data-rv>The market around us</p>
+    <h2 class="fh" data-rv>Four facts that shaped this plan</h2>
+    <div class="g g-4" id="marketGrid" style="margin-top:clamp(26px,4vh,44px)"></div>
+
+    <div style="margin-top:clamp(44px,7vh,78px)">
+      <h3 class="sh" data-rv>What everyone else is selling</h3>
+      <p class="lead" data-rv id="compIntro"></p>
+      <div class="tbl-wrap" data-rv><table class="tbl" id="compTable"></table></div>
+      <p class="lead" data-rv id="compRead" style="margin-top:26px"></p>
+    </div>
+
+    <div class="advantage" id="advantage" data-rv style="margin-top:clamp(38px,6vh,64px)"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════ REEL 02 · THE DIRECTION ══ -->
+
+<section class="frame frame--leader frame--bg" id="reel-02" data-reel="02" data-frame="04" data-label="The Direction">
+    <div class="framebg" data-parallax data-scrim="even" aria-hidden="true"><img src="assets/img/bg-night.webp" alt="" loading="eager" decoding="async"></div>
+  <div class="frame__inner">
+    <p class="reel-mark">Chapter Two</p>
+    <h2>The Direction</h2>
+    <p class="leader-sub">What Cinemacity stands for on social, who we are talking to, and where.</p>
+  </div>
+</section>
+
+<!-- 04 · THE INSIGHT -->
+<section class="frame frame--statement frame--bg" id="insight" data-reel="02" data-frame="04" data-label="The insight">
+    <div class="framebg" data-parallax aria-hidden="true"><img src="assets/img/bg-night.webp" alt="" loading="eager" decoding="async"></div>
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">04</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>The insight</p>
+    <p class="statement" data-rv>The film is already decided.<br><em>The night is not.</em></p>
+    <div class="split" style="margin-top:clamp(34px,6vh,60px)">
+      <div class="body" data-rv data-d="1">
+        <p>By the time someone opens Instagram, they usually know what they want to watch. Studios spend enormous sums settling that question.</p>
+        <p>The second question is wide open. <strong>Where.</strong> With whom. What kind of evening it becomes. Nearly three quarters of cinema visits are group occasions, so it is rarely even one person’s decision.</p>
+      </div>
+      <div class="body" data-rv data-d="2">
+        <p>Today that choice is made on habit and proximity, because nobody in the category is arguing for it.</p>
+        <p>Cinemacity is the one brand here with something to argue with. Not scale — <strong>rooms.</strong> And food, and bars, and venues that genuinely do not exist anywhere else in the country.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · POSITIONING -->
+<section class="frame" id="positioning" data-reel="02" data-frame="05" data-label="Positioning">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">05</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>Positioning</p>
+    <h2 class="fh" data-rv>The room makes the movie</h2>
+    <p class="lead" data-rv>Cinemacity does not post about films. It posts about the experience films are seen in — the screen, the seat, the food, the bar afterwards — and it names them, every time.</p>
+
+    <div class="g g-3" style="margin-top:clamp(28px,5vh,50px)">
+      <div class="card" data-rv>
+        <h3>What it means</h3>
+        <p>Every post carries an argument: <em>this one is worth choosing.</em> The room, the format, the meal, the evening. Never just what is showing.</p>
+      </div>
+      <div class="card" data-rv data-d="1">
+        <h3>Why only Cinemacity</h3>
+        <p>A chain with hundreds of near-identical screens cannot make this claim. Cinemacity can, because its rooms and venues are genuinely singular.</p>
+      </div>
+      <div class="card" data-rv data-d="2">
+        <h3>What it gives us</h3>
+        <p>A first question for every brief — <em>which room, and why?</em> — and a content supply that never runs dry, because it does not depend on the release slate.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(36px,6vh,60px)" data-rv>
+      <p class="statement statement--sm">Not <em>what’s on.</em><br>Which room, and why.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Visual breather: the experience, not the argument -->
+<section class="expstrip" id="expstrip" aria-label="Cinemacity experience photography">
+  <div class="expstrip__track" id="expTrack"></div>
+  <span class="expstrip__cap">The Cinemacity experience</span>
+</section>
+
+<!-- 06 · OBJECTIVES -->
+<section class="frame" id="objectives" data-reel="02" data-frame="06" data-label="Objectives">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">06</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>Objectives</p>
+    <h2 class="fh" data-rv>Five things this channel will do</h2>
+    <div id="objectivesList" style="margin-top:clamp(22px,4vh,40px)"></div>
+  </div>
+</section>
+
+<!-- 07 · OCCASIONS -->
+<section class="frame frame--light" id="occasions" data-reel="02" data-frame="07" data-label="Who we are talking to">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">07</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>Audience</p>
+    <h2 class="fh" data-rv>Five occasions, not five age brackets</h2>
+    <p class="lead" data-rv>What changes the content is not how old someone is. It is <strong>why they are going, who with, and what is stopping them.</strong></p>
+    <div id="occasions-list" style="margin-top:clamp(22px,4vh,40px)"></div>
+    <p class="note" data-rv id="audienceNote"></p>
+  </div>
+</section>
+
+<!-- 08 · PLATFORMS -->
+<section class="frame" id="platforms" data-reel="02" data-frame="08" data-label="Platform roles">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">08</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>Platform strategy</p>
+    <h2 class="fh" data-rv>What we make, and where it goes</h2>
+    <p class="lead" data-rv>Six brand Reels a month sit at the centre of everything. They travel across Instagram, TikTok, YouTube and Snapchat, which is what makes the volume below achievable without thinning the quality.</p>
+
+    <div class="tbl-wrap" data-rv style="margin-top:clamp(22px,4vh,38px)"><table class="tbl" id="productionTable"></table></div>
+    <p class="note" data-rv id="productionNote"></p>
+
+    <div id="platforms-list" style="margin-top:clamp(30px,5vh,52px)"></div>
+  </div>
+</section>
+
+
+<!-- 09 · SNAPCHAT -->
+<section class="frame frame--light" id="snapchat" data-reel="02" data-frame="09" data-label="Snapchat direction">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">09</span><span>The Direction</span></div>
+    <p class="eyebrow" data-rv>Snapchat</p>
+    <h2 class="fh" data-rv>Run from inside the cinema</h2>
+    <p class="lead" data-rv id="snapIntro"></p>
+
+    <div class="g g-3" id="snapWhy" style="margin-top:clamp(26px,4vh,44px)"></div>
+
+    <div style="margin-top:clamp(38px,6vh,64px)">
+      <h3 class="sh" data-rv>The week</h3>
+      <div class="tbl-wrap" data-rv><table class="tbl" id="snapWeek"></table></div>
+    </div>
+
+    <div class="split" style="margin-top:clamp(38px,6vh,64px)">
+      <div data-rv>
+        <h3 class="sh">The rules</h3>
+        <ol class="ruleset" id="snapRules"></ol>
+      </div>
+      <div data-rv data-d="1">
+        <h3 class="sh">Set up first</h3>
+        <div id="snapSetup"></div>
+        <div class="snapbox" style="margin-top:26px">
+          <h4>How we work together</h4>
+          <p id="snapWorkflow"></p>
+        </div>
+        <div class="snapbox" style="margin-top:14px">
+          <h4>What we measure</h4>
+          <p id="snapMeasure"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ REEL 03 · THE WORK ══ -->
+
+<section class="frame frame--leader" id="reel-03" data-reel="03" data-frame="10" data-label="The Work">
+  <div class="frame__inner">
+    <p class="reel-mark">Chapter Three</p>
+    <h2>The Work</h2>
+    <p class="leader-sub">Five pillars, fifteen recurring formats, and the campaigns worth building the year around.</p>
+  </div>
+</section>
+
+<!-- 10 · PILLARS -->
+<section class="frame" id="pillars" data-reel="03" data-frame="10" data-label="Content pillars">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">10</span><span>The Work</span></div>
+    <p class="eyebrow" data-rv>Content pillars</p>
+    <h2 class="fh" data-rv>Five pillars</h2>
+    <p class="lead" data-rv>Each one has its own reason to exist, its own voice, its own repeatable formats — and none of them could be published unchanged by another cinema in this market.</p>
+    <div id="pillars-list" style="margin-top:clamp(30px,5vh,56px)"></div>
+  </div>
+</section>
+
+<!-- 11 · FORMATS -->
+<section class="frame frame--light" id="formats" data-reel="03" data-frame="11" data-label="Recurring formats">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">10</span><span>The Work</span></div>
+    <p class="eyebrow" data-rv>Recurring formats</p>
+    <h2 class="fh" data-rv>Fifteen things the audience learns to expect</h2>
+    <p class="lead" data-rv>Named, repeating formats build a body of work. A stream of one-off posts builds nothing.</p>
+    <div class="tbl-wrap" data-rv style="margin-top:22px"><table class="tbl" id="formatsTable"></table></div>
+  </div>
+</section>
+
+<!-- 12 · CAMPAIGNS -->
+<section class="frame" id="campaigns" data-reel="03" data-frame="12" data-label="Campaigns and moments">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">11</span><span>The Work</span></div>
+    <p class="eyebrow" data-rv>Campaigns</p>
+    <h2 class="fh" data-rv>Four moments worth building around</h2>
+    <div class="g g-2" id="campaignGrid" style="margin-top:clamp(26px,4vh,44px)"></div>
+  </div>
+</section>
+
+<!-- 13 · PAID -->
+<section class="frame frame--light" id="paid" data-reel="03" data-frame="13" data-label="Paid and organic">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">13</span><span>The Work</span></div>
+    <p class="eyebrow" data-rv>Paid and organic</p>
+    <h2 class="fh" data-rv>Let the audience choose the media plan</h2>
+    <p class="lead" data-rv>Organic proves what works. Paid scales it. Never the other way round.</p>
+    <div id="paidModel" style="margin-top:clamp(22px,4vh,40px)"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ REEL 04 · THE LOOK ══ -->
+
+<section class="frame frame--leader" id="reel-04" data-reel="04" data-frame="14" data-label="The Look">
+  <div class="frame__inner">
+    <p class="reel-mark">Chapter Four</p>
+    <h2>The Look</h2>
+    <p class="leader-sub">A system built to make every asset feel like Cinemacity — including the ones we did not shoot.</p>
+  </div>
+</section>
+
+<!-- 14 · VISUAL SYSTEM -->
+<section class="frame" id="visual" data-reel="04" data-frame="14" data-label="Visual system">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">14</span><span>The Look</span></div>
+    <p class="eyebrow" data-rv>Visual system</p>
+    <h2 class="fh" data-rv>Six rules, and what each is for</h2>
+    <div class="g g-3" id="visualPrinciples" style="margin-top:clamp(24px,4vh,44px)"></div>
+  </div>
+</section>
+
+<!-- 15 · IN ACTION -->
+<section class="frame" id="visual-action" data-reel="04" data-frame="15" data-label="The system in action">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">15</span><span>The Look</span></div>
+    <p class="eyebrow" data-rv>In action</p>
+    <h2 class="fh" data-rv>The system in action</h2>
+    <p class="lead" data-rv>How the direction looks in practice, across formats and across pillars.</p>
+    <div class="vsgrid" id="visualExamples" style="margin-top:clamp(24px,4vh,44px)"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ REEL 05 · VIEWS TO TICKETS ══ -->
+
+<section class="frame frame--leader frame--bg" id="reel-05" data-reel="05" data-frame="16" data-label="From Views to Tickets">
+    <div class="framebg" data-parallax data-scrim="even" aria-hidden="true"><img src="assets/img/bg-sunset.webp" alt="" loading="eager" decoding="async"></div>
+  <div class="frame__inner">
+    <p class="reel-mark">Chapter Five</p>
+    <h2>From Views<br>to Tickets</h2>
+    <p class="leader-sub">Where our work hands over, and what would help it land.</p>
+  </div>
+</section>
+
+<!-- 16 · THE PATH -->
+<section class="frame" id="journey" data-reel="05" data-frame="16" data-label="The path to purchase">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">16</span><span>From Views to Tickets</span></div>
+    <p class="eyebrow" data-rv>The path to purchase</p>
+    <h2 class="fh" data-rv>Where 2.5 million views go next</h2>
+    <div class="jflow" id="journeyFlow" data-rv style="margin-top:clamp(28px,5vh,48px)"></div>
+    <div style="margin-top:clamp(32px,5vh,56px)" data-rv>
+      <p class="statement statement--sm">We can keep growing the views.<br>The <em>handover</em> decides how many become tickets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 17 · WHAT WOULD HELP -->
+<section class="frame frame--light" id="booking" data-reel="05" data-frame="17" data-label="What would help">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">17</span><span>From Views to Tickets</span></div>
+    <p class="eyebrow" data-rv>What would help</p>
+    <h2 class="fh" data-rv>Five things that would make every post work harder</h2>
+    <p class="lead" data-rv id="bookingMessage"></p>
+    <div class="g g-2" id="bookingFindings" style="margin-top:clamp(26px,4vh,46px)"></div>
+    <p class="lead" data-rv id="bookingClose" style="margin-top:clamp(26px,4vh,42px)"></p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ REEL 06 · MAKING IT WORK ══ -->
+
+<section class="frame frame--leader" id="reel-06" data-reel="06" data-frame="18" data-label="Making It Work">
+  <div class="frame__inner">
+    <p class="reel-mark">Chapter Six</p>
+    <h2>Making It Work</h2>
+    <p class="leader-sub">The year ahead, how we measure it, and where we start.</p>
+  </div>
+</section>
+
+<!-- 18 · THE YEAR -->
+<section class="frame" id="rhythm" data-reel="06" data-frame="18" data-label="The year ahead">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">18</span><span>Making It Work</span></div>
+    <p class="eyebrow" data-rv>The year ahead</p>
+    <h2 class="fh" data-rv>Fourteen months, with the peaks named</h2>
+    <div class="intensity" id="intensity" data-rv aria-hidden="true"></div>
+    <p class="mono" data-rv style="margin-bottom:20px">Relative content intensity across the year</p>
+    <div class="tl" id="timeline"></div>
+  </div>
+</section>
+
+<!-- 19 · MEASUREMENT -->
+<section class="frame" id="measurement" data-reel="06" data-frame="19" data-label="How we measure">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">19</span><span>Making It Work</span></div>
+    <p class="eyebrow" data-rv>Measurement</p>
+    <h2 class="fh" data-rv>How we measure it</h2>
+    <p class="lead" data-rv id="metricsNote"></p>
+    <div class="g g-3" id="metrics" style="margin-top:clamp(26px,4vh,46px)"></div>
+    <p class="note" data-rv id="metricsFootnote"></p>
+  </div>
+</section>
+
+<!-- 20 · FIRST 90 DAYS -->
+<section class="frame frame--light" id="ninety" data-reel="06" data-frame="20" data-label="Where we start">
+  <div class="frame__inner">
+    <div class="slate"><span class="slate__n">20</span><span>Making It Work</span></div>
+    <p class="eyebrow" data-rv>Implementation</p>
+    <h2 class="fh" data-rv>The first ninety days</h2>
+    <p class="lead" data-rv>Sequenced so the pillars with fewest dependencies launch first, and everything is proven before December.</p>
+    <div class="g g-3" id="ninetyDays" style="margin-top:clamp(24px,4vh,44px)"></div>
+  </div>
+</section>
+
+<!-- 21 · CLOSE -->
+<section class="frame close-frame frame--bg" id="close" data-reel="06" data-frame="21" data-label="Close">
+    <div class="framebg" data-parallax aria-hidden="true"><img src="assets/img/bg-sunset.webp" alt="" loading="eager" decoding="async"></div>
+  <div class="frame__inner">
+    <p class="statement" data-rv>The film is already decided.<br>The night is not.<br><em>That’s the part we can win.</em></p>
+    <div class="split" style="margin-top:clamp(34px,6vh,60px)">
+      <div class="body" data-rv data-d="1">
+        <p>Cinemacity will not win this category on scale, and it does not need to. It has rooms, food and venues that genuinely do not exist anywhere else in the UAE — and an audience already searching for them.</p>
+      </div>
+      <div class="body" data-rv data-d="2">
+        <p>The year ahead is about spending that attention on the one thing only Cinemacity can offer.</p>
+        <p><strong>Which room, and why.</strong></p>
+      </div>
+    </div>
+    <p class="cold__foot" style="margin-top:clamp(38px,7vh,68px)">
+      <span>INHAUS Digital · August 2026</span>
+      <span>Cinemacity · Social Media Strategy 2026–27</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<script src="assets/content.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

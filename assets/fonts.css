@@ -1,0 +1,62 @@
+/* ============================================================================
+   CINEMACITY · STRATEGY DECK — SELF-HOSTED TYPEFACES
+   ----------------------------------------------------------------------------
+   Fonts are bundled locally (272 KB total, latin subset) rather than loaded from
+   a CDN. A client presentation should never depend on conference-room wifi, and
+   the deck must look identical opened from a USB stick.
+
+   Archivo          — variable (wght 100–900, wdth 62–125). Display + UI.
+   Instrument Serif — statements and hero lines only.
+   IBM Plex Mono    — frame numbers, timecodes, labels, metadata.
+
+   All three are SIL Open Font License 1.1.
+   ========================================================================= */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('fonts/archivo-latin-wdth-normal.woff2') format('woff2-variations'),
+       url('fonts/archivo-latin-wdth-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('fonts/archivo-latin-wdth-italic.woff2') format('woff2-variations'),
+       url('fonts/archivo-latin-wdth-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/instrument-serif-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/instrument-serif-latin-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2');
+}
