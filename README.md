@@ -8,7 +8,7 @@ Prepared by INHAUS Digital, August 2026.
 ## Two ways to open it
 
 **`Cinemacity-Strategy-2026-27.html`** (single file, 1.8 MB)
-Everything inlined — CSS, JavaScript, all three typefaces and all nine photographs as data URIs. Zero external requests. Double-click it, email it, put it on a USB stick, present it on a plane. This is the one to send to the client.
+Everything inlined — CSS, JavaScript, all eleven font files and all nine photographs as data URIs. Zero external requests. Double-click it, email it, put it on a USB stick, present it on a plane. This is the one to send to the client.
 
 **`cinemacity-2026/index.html`** (source folder)
 The editable version. Same output, split into readable files. Double-clicking works here too — the scripts are classic (non-module) precisely so `file://` doesn't break. Also fine on any static host: Netlify, Vercel, S3, a plain folder on a server.
@@ -28,7 +28,7 @@ cinemacity-2026/
     ├── strategy.css        Design system. Palette tokens at the top of :root.
     ├── fonts.css           @font-face declarations.
     ├── app.js              Rendering + navigation. Rarely needs touching.
-    ├── fonts/              Archivo (variable), Instrument Serif, IBM Plex Mono.
+    ├── fonts/              Albra Text + PP Monument, subset WOFF2, 145 KB.
     └── img/                Backgrounds + Cinemacity photography, WebP, 593 KB total.
 ```
 
@@ -134,11 +134,18 @@ The left rail shows the current frame and chapter; the top bar shows where you a
 **Palette** — all tokens live at the top of `:root` in `strategy.css`. Swap them there to rebrand.
 
 - Base near-black `#08080a`, bone `#ece7dd` for the light editorial frames
-- Projector amber `#f0b152` as the single accent
-- Red `#e2452c` used **only** for the one point in the booking journey where attention drops, so it keeps its meaning
-- Light-frame variants (`--beam-ink`, `--critical-ink`) exist because amber fails contrast on bone
+- **Cinemacity green `#256D58`** — the brand colour, with a clear job: it is the accent on every light frame (5.0:1 on bone), and it grounds the positioning frame outright. `--brand-lt #4fa78b` carries it onto dark frames, where the pure green only reaches 3.25:1 and the tint clears 6.9:1
+- Projector amber `#f0b152` — the projection light, and the accent on dark frames. Green and amber never do the same job, so neither dilutes the other
+- Red `#e2452c` used **only** for the one point in the booking journey where attention drops
+- Every pairing above was checked numerically against WCAG AA
 
-**Type** — Archivo (variable, display + UI), Instrument Serif (statements only), IBM Plex Mono (frame numbers, labels, metadata). All three SIL Open Font License 1.1, bundled locally.
+**Type** — Cinemacity's own faces, subset and bundled locally (11 faces, 145 KB total):
+
+- **Albra Text** — titles, statements, pillar lines. Light at display sizes, Regular and Italic below.
+- **PP Monument** — body, UI, everything else. Ships Light / Regular / Black only, so the CSS maps 300→Light, 400+500→Regular, 700+900→Black; a `font-weight: 600` resolves up to Black by design.
+- **PP Monument Condensed** — big headings, stat figures, and the labels that used to be monospaced. Set in caps with wide tracking it does the same job in the brand's own voice.
+
+⚠️ **The Albra files supplied are TRIAL cuts.** Licensed versions must replace them before this is hosted publicly. Same filenames in `assets/fonts/`, no code change needed.
 
 **Concept** — the platform is *the room*; a film frame *is* a room; so the deck is a vertical strip of frames on a perforated rail. Film language drives structure and navigation, not decoration. There are no clapperboards, popcorn or reel illustrations anywhere in the codebase.
 
