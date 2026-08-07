@@ -1541,3 +1541,47 @@ p:last-child { margin-bottom: 0; }
 }
 .vids__group:first-of-type { margin-top: 4px; }
 .frame--light .vids__group { color: var(--brand); }
+
+/* ============================================================================
+   41. INSTAGRAM EMBEDS
+   ----------------------------------------------------------------------------
+   Instagram's official /embed/ renders a card, not a bare video: an account
+   header sits above the media and an actions bar below it. Forced into the
+   9:16 frame the Drive films use, the video itself would end up tiny and the
+   card would clip. So Instagram slots get their own treatment — fewer, wider
+   columns and a taller frame that accounts for the chrome.
+   ========================================================================= */
+.vids--ig { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1080px) { .vids--ig { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px)  { .vids--ig { grid-template-columns: 1fr; } }
+
+.vslot--ig .vslot__media {
+  /* Instagram's card = header (~56px) + media at 9:16 + actions and caption
+     (~100px). At a 404px column that totals roughly 870px, so ~1:2.05. Erring
+     slightly tall: a small gap below the card is far less noticeable than a
+     clipped video. */
+  aspect-ratio: 1 / 2.05;
+  background-color: #0c0c10;
+}
+.vslot--ig .vslot__media iframe {
+  background: #fff;   /* Instagram's card is light — a dark bed flashes on load */
+}
+
+/* Instagram embeds can be blocked by the browser, by an extension or by Meta
+   itself, so every Instagram slot carries a visible way through to the post. */
+.vslot__link {
+  justify-self: start;
+  margin-top: 6px;
+  font: 500 10.5px/1 var(--f-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--beam);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,177,82,.35);
+  padding-bottom: 3px;
+  transition: color .2s, border-color .2s;
+}
+.vslot__link:hover, .vslot__link:focus-visible {
+  color: var(--txt); border-color: var(--txt);
+}
+.frame--light .vslot__link { color: var(--brand); border-bottom-color: rgba(37,109,88,.4); }

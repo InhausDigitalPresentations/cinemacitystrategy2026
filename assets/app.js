@@ -47,11 +47,22 @@
   function toDriveEmbed(url) {
     if (isToken(url)) return null;
     var u = String(url).trim();
+
+    /* Instagram: /reel/, /reels/, /p/ and /tv/ all embed through the same
+       official /embed/ path. Tracking params like ?igsh= must be dropped or
+       the embed 404s. */
+    if (u.indexOf('instagram.com') !== -1) {
+      var ig = u.match(/instagram\.com\/(?:reels?|p|tv)\/([A-Za-z0-9_-]+)/);
+      return ig ? 'https://www.instagram.com/reel/' + ig[1] + '/embed/' : null;
+    }
+
     if (u.indexOf('drive.google.com') === -1) return u; // direct file / other host
     var m = u.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || u.match(/[?&]id=([a-zA-Z0-9_-]+)/);
     if (!m) return null;
     return 'https://drive.google.com/file/d/' + m[1] + '/preview';
   }
+
+  function isInstagram(url) { return String(url || '').indexOf('instagram.com') !== -1; }
 
   function isDirectVideo(url) { return /\.(mp4|webm|ogg|mov)(\?|$)/i.test(url || ''); }
 
@@ -248,7 +259,8 @@
     if (v.format) tags.push(v.format);
     if (v.credit && !isToken(v.credit)) tags.push(v.credit);
 
-    return '<figure class="vslot' + (wide ? ' vslot--wide' : '') + '">' +
+    var ig = isInstagram(v.driveUrl);
+    return '<figure class="vslot' + (wide ? ' vslot--wide' : '') + (ig ? ' vslot--ig' : '') + '">' +
       '<div class="vslot__media">' + media + '</div>' +
       '<figcaption class="vslot__meta">' +
         '<span class="vslot__t' + (titleTok ? ' is-empty' : '') + '">' +
@@ -258,7 +270,8 @@
           return '<span class="vslot__tag">' + esc(t) + '</span>';
         }).join('') + '</span>' : '') +
         (v.externalUrl && !isToken(v.externalUrl)
-          ? '<a href="' + esc(v.externalUrl) + '" target="_blank" rel="noopener" class="vslot__tag" style="justify-self:start;margin-top:4px">Reference ↗</a>'
+          ? '<a href="' + esc(v.externalUrl) + '" target="_blank" rel="noopener" class="vslot__link">' +
+            (isInstagram(v.externalUrl) ? 'Open on Instagram' : 'Open reference') + ' \u2197</a>'
           : '') +
       '</figcaption></figure>';
   }
@@ -522,8 +535,11 @@
       else groups.push({ name: name, items: [v] });
     });
     return groups.map(function (g) {
+      var anyIg = g.items.some(function (v) { return isInstagram(v.driveUrl); });
       return (g.name ? '<p class="vids__group">' + esc(g.name) + '</p>' : '') +
-        '<div class="vids">' + g.items.map(function (v) { return videoSlot(v); }).join('') + '</div>';
+        '<div class="vids' + (anyIg ? ' vids--ig' : '') + '">' +
+          g.items.map(function (v) { return videoSlot(v); }).join('') +
+        '</div>';
     }).join('');
   }
 

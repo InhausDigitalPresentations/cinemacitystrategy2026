@@ -55,21 +55,28 @@ videos: [
 ]
 ```
 
-**Any of these Drive link formats work** — they are all normalised automatically:
+**Any of these link formats work** — they are all normalised automatically:
 
 | You paste | It becomes |
 |---|---|
-| `.../file/d/FILE_ID/view?usp=sharing` | `.../file/d/FILE_ID/preview` |
-| `.../open?id=FILE_ID` | `.../file/d/FILE_ID/preview` |
-| `.../uc?id=FILE_ID` | `.../file/d/FILE_ID/preview` |
-| `.../file/d/FILE_ID/preview` | unchanged |
+| `drive.../file/d/FILE_ID/view?usp=sharing` | `.../file/d/FILE_ID/preview` |
+| `drive.../open?id=FILE_ID` | `.../file/d/FILE_ID/preview` |
+| `drive.../uc?id=FILE_ID` | `.../file/d/FILE_ID/preview` |
+| `drive.../file/d/FILE_ID/preview` | unchanged |
+| `instagram.com/reel/CODE/?igsh=…` | `instagram.com/reel/CODE/embed/` |
+| `instagram.com/p/CODE/` or `/tv/CODE/` | `instagram.com/reel/CODE/embed/` |
 | A direct `.mp4` / `.webm` URL | plays natively |
+| A Drive **folder** link | `null` — folders can't embed, use the file links inside |
+
+Instagram tracking params (`?igsh=…`) are stripped; leaving them on makes the embed 404.
 
 Set Drive sharing to **"Anyone with the link"** or the embed will show a permission error instead of the film.
 
 **Behaviour:** nothing autoplays and nothing preloads — videos load only when clicked. That is deliberate: an autoplaying video in a client meeting is a disaster, and preloading twelve films would make the page crawl. If an embed fails, the frame keeps its shape and shows the error rather than collapsing.
 
-**As built:** twenty-three reference films, all live Google Drive links, all vertical 9:16 — Movies First 4 · Location & Experience 12 · Entertainment & Culture 3 · People & Moments 2 · Creator Seeding 2. No empty slots remain.
+**As built:** twenty-six reference films, all live Google Drive links, all vertical 9:16 — Movies First 4 · Location & Experience 12 · Entertainment & Culture 3 · People & Moments 5 · Creator Seeding 2. No empty slots remain.
+
+People & Moments uses live Instagram Reels rather than Drive files. Instagram's official `/embed/` renders a card — account header above, actions and caption below — not a bare video, so those slots get their own treatment: three wider columns instead of four, and a taller 1:2.05 frame to fit the chrome. Every Instagram slot also carries a visible **Open on Instagram ↗** link, because Meta can block embeds and a browser extension or privacy setting can too.
 
 A film can carry an optional `group` field. Consecutive films sharing a group render under one small label, which is what keeps the twelve-film Location & Experience pillar from reading as an undifferentiated wall — it splits into Location (7), The experience (3) and Food (2). Films without a group just render straight into the grid.
 
