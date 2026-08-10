@@ -1,0 +1,956 @@
+/* ============================================================================
+   CINEMACITY · SOCIAL MEDIA STRATEGY 2026–27
+   content.js — EDITABLE STRATEGIC CONTENT
+   ----------------------------------------------------------------------------
+   This is the only file you need to touch to update the strategy's data.
+   Nothing here knows anything about layout. Everything is rendered by app.js.
+
+   HOW TO ADD VIDEOS
+     Find the pillar in PILLARS[] and edit its `videos` array.
+     `driveUrl` accepts ANY of these three Google Drive forms:
+        https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+        https://drive.google.com/open?id=FILE_ID
+        https://drive.google.com/file/d/FILE_ID/preview
+     They are all normalised to an embeddable /preview URL automatically.
+     Leave the ALL_CAPS placeholder strings in place until a real asset exists —
+     the layout is designed to look finished while they are still there.
+
+   HOW TO ADD DESIGN EXAMPLES
+     Edit VISUAL_SYSTEM_EXAMPLES[]. Set `assetUrl` to an image or video URL.
+     `aspectRatio` drives the frame, so 9:16, 4:5, 1:1 and 16:9 all sit
+     correctly side by side without cropping. No layout changes required.
+
+   EVIDENCE DISCIPLINE
+     Every data point carries a `source` and every claim carries a `tier`:
+        'observed'  — we saw it directly, on the stated date
+        'reported'  — published by a named third party
+        'client'    — from Cinemacity's own reporting
+        'hypothesis'— our inference, requires validation
+        'todo'      — awaiting client data. Never invent a number here.
+   ========================================================================= */
+
+const DECK = {
+  client: 'Cinemacity',
+  title: 'The Room Makes The Movie',
+  subtitle: 'Social Media Strategy 2026–27',
+  agency: 'INHAUS Digital',
+  date: 'August 2026',
+  confidentiality: 'Confidential · Prepared for Cinemacity'
+};
+
+/* ---------------------------------------------------------------------------
+   1 · REELS + FRAMES — drives the navigation index and the sprocket rail.
+   `id` must match the id attribute on the corresponding <section> in index.html
+   ------------------------------------------------------------------------ */
+const REELS = [
+  {
+    n: '01', title: 'The Situation',
+    frames: [
+      { id: 'cold-open',   n: '00', label: 'Cold open' },
+      { id: 'summary',     n: '01', label: 'The one-page version' },
+      { id: 'standing',    n: '02', label: 'Where Cinemacity actually stands' },
+      { id: 'market',      n: '03', label: 'The category is discounting itself' },
+      { id: 'evidence',    n: '04', label: 'What the data actually says' },
+      { id: 'audience-gap',n: '05', label: 'The audience nobody is talking to' },
+      { id: 'insight',     n: '06', label: 'The insight' }
+    ]
+  },
+  {
+    n: '02', title: 'The Direction',
+    frames: [
+      { id: 'opportunity', n: '07', label: 'The opportunity' },
+      { id: 'positioning', n: '08', label: 'Positioning' },
+      { id: 'objectives',  n: '09', label: 'Objectives' },
+      { id: 'occasions',   n: '10', label: 'Audiences by occasion' },
+      { id: 'platforms',   n: '11', label: 'The platform ecosystem' }
+    ]
+  },
+  {
+    n: '03', title: 'From Attention to Admission',
+    frames: [
+      { id: 'journey',     n: '12', label: 'The social-to-booking journey' },
+      { id: 'ux-audit',    n: '13', label: 'Booking UX audit' },
+      { id: 'ux-fixes',    n: '14', label: 'Conversion barriers & fixes' }
+    ]
+  },
+  {
+    n: '04', title: 'The Work',
+    frames: [
+      { id: 'system',      n: '15', label: 'The content operating system' },
+      { id: 'pillars',     n: '16', label: 'The five pillars' },
+      { id: 'formats',     n: '17', label: 'Recurring formats' },
+      { id: 'campaigns',   n: '18', label: 'Campaigns & cultural moments' },
+      { id: 'creators',    n: '19', label: 'Creators & community' },
+      { id: 'paid',        n: '20', label: 'Paid & organic' }
+    ]
+  },
+  {
+    n: '05', title: 'The Look',
+    frames: [
+      { id: 'visual',      n: '21', label: 'Visual system' },
+      { id: 'visual-action', n: '22', label: 'The visual system in action' }
+    ]
+  },
+  {
+    n: '06', title: 'The Proof',
+    frames: [
+      { id: 'rhythm',      n: '23', label: 'The annual rhythm' },
+      { id: 'measurement', n: '24', label: 'Measurement framework' },
+      { id: 'blindspots',  n: '25', label: 'What we cannot measure yet' },
+      { id: 'ninety',      n: '26', label: 'First 90 days' },
+      { id: 'close',       n: '27', label: 'Closing frame' }
+    ]
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   2 · THE MEASURED FUNNEL — Cinemacity's own July 2026 Instagram reporting
+   ------------------------------------------------------------------------ */
+const FUNNEL = {
+  source: "Cinemacity monthly social report, July 2026 (INHAUS)",
+  note: "The July report shows profile visits as both 9,078 and 9,377 on different slides. Reconcile before the client presentation — we have used the lower figure.",
+  steps: [
+    { label: 'Views',            value: '2,501,103', rate: null,      note: 'Instagram, July 2026' },
+    { label: 'Profile visits',   value: '~9,100',    rate: '0.36%',   note: 'of views' },
+    { label: 'Bio link taps',    value: '1,665',     rate: '0.067%',  note: 'of views' },
+    { label: 'Bookings',         value: 'UNKNOWN',   rate: '—',       note: 'No attribution exists between social and Vista', unknown: true }
+  ],
+  followers: {
+    headline: '0',
+    label: 'Net new followers in July, from 2.5 million views',
+    support: 'Excluding January’s giveaway spike of +5,262, the six months from February to July netted 304 followers in total.'
+  }
+};
+
+/* Monthly trend — from the client's own KPI tables. Views vs interactions. */
+const KPI_TREND = {
+  source: "Cinemacity monthly social reports, Dec 2025 – Jul 2026 (INHAUS)",
+  months: [
+    { m: 'Dec 25', views: 166745,  interactions: 1392,   followersGained: 5    },
+    { m: 'Jan 26', views: 1690081, interactions: 172659, followersGained: 5262 },
+    { m: 'Feb 26', views: 637733,  interactions: 48137,  followersGained: 4    },
+    { m: 'Mar 26', views: 266424,  interactions: 15470,  followersGained: 54   },
+    { m: 'Apr 26', views: 365019,  interactions: 12071,  followersGained: 23   },
+    { m: 'May 26', views: 321654,  interactions: 55030,  followersGained: 223  },
+    { m: 'Jun 26', views: 533133,  interactions: 25463,  followersGained: 0    },
+    { m: 'Jul 26', views: 2501103, interactions: 106478, followersGained: 0    }
+  ]
+};
+
+/* TikTok search share — the strongest demand signal in the account */
+const SEARCH_TREND = {
+  source: "Cinemacity monthly TikTok reports (INHAUS). Note: the previous deck labelled 14.5% as February; it is January. February was 11.7%.",
+  points: [
+    { m: 'Dec 25', v: 26.2 }, { m: 'Jan 26', v: 14.5 }, { m: 'Feb 26', v: 11.7 },
+    { m: 'Mar 26', v: 25.2 }, { m: 'Apr 26', v: 30.4 }, { m: 'May 26', v: 38.9 },
+    { m: 'Jun 26', v: 39.8 }, { m: 'Jul 26', v: 60.8 }
+  ]
+};
+
+/* Paid efficiency — the single most damning content finding */
+const PAID_PROOF = {
+  headline: 'A boosted distributor asset delivered 646,900 views and 41 likes.',
+  rows: [
+    { type: 'Distributor · boosted', views: '646,900', likes: '41',     rate: '0.006%', bad: true },
+    { type: 'Distributor · boosted', views: '84,000',  likes: '13',     rate: '0.015%', bad: true },
+    { type: 'Distributor · organic', views: '66,100',  likes: '527',    rate: '0.80%' },
+    { type: 'Pop culture · organic', views: '392,800', likes: '50,100', rate: '12.8%', good: true }
+  ],
+  source: 'Cinemacity Instagram, top content by reach, 90 days to June 2026 (INHAUS).',
+  reading: 'This is not an argument against paid media. It is an argument against paying to distribute an asset the audience has already seen, from a distributor who is already running it. Paid money belongs behind proven organic formats and behind conversion — not behind trailers.'
+};
+
+/* ---------------------------------------------------------------------------
+   3 · MARKET CONTEXT
+   ------------------------------------------------------------------------ */
+const MARKET_NOTE = 'We are a social and content agency, not Cinemacity’s marketing department. We researched the category because content decisions made without it are guesswork — not to tell the client how to run their business. Everything below is here because it changed something in the content plan.';
+
+const MARKET = [
+  {
+    stat: '− 8.3%',
+    label: 'UAE box office value, 2024 → 2025',
+    detail: 'AED 800m fell to AED 734m while admissions barely moved (15.0m → 14.8m). The category is competing on price. That is why we have not built this strategy on discount-led content — everyone is already there, and it is the one message Cinemacity cannot win.',
+    tier: 'reported',
+    source: 'UAE Media Council (2024); National Media Authority via Gulf News, June 2026.'
+  },
+  {
+    stat: '88.5%',
+    label: 'of UAE residents are expatriates',
+    detail: 'South Asians are roughly 62% of that population. Malayalam has around 1.06m speakers in the UAE and Tamil 455,000 — the largest non-Arabic film audience in the country is South Indian.',
+    tier: 'reported',
+    source: 'Demographics of the UAE, 2024–25 data. Worldometer population 11.57m, median age 31.6.'
+  },
+  {
+    stat: '78.7%',
+    label: 'of UAE e-commerce happens on a smartphone',
+    detail: 'Everything we publish will be seen on a phone, held in one hand, usually in the evening. It is the reason every format in this plan is vertical-first and every call to action is designed for a thumb.',
+    tier: 'reported',
+    source: 'INTLBM, June 2026, citing Grand View Research and University of Sharjah.'
+  },
+  {
+    stat: '90.7%',
+    label: 'of viewers see a film within its first 30 days',
+    detail: 'The window is short and front-loaded — but distributors spend almost all of it on opening weekend. That leaves weeks two, three and four unclaimed, and it is where one of our five pillars lives.',
+    tier: 'reported',
+    source: 'EntTelligence, 2025, via Deadline.'
+  }
+];
+
+const COMPETITIVE = {
+  intro: 'We have deliberately left follower counts out of this deck. Every platform blocks automated verification, and putting an estimated number in front of a client is not worth the risk. The structural picture matters more, and it is unambiguous.',
+  rows: [
+    { name: 'VOX',        owner: 'Majid Al Futtaim',   scale: '~23 UAE sites, ~237 screens', moat: 'SHARE loyalty across 2,300+ stores and 17 malls', app: '1M+ downloads · 3.1★' },
+    { name: 'Reel',       owner: 'Emaar Entertainment', scale: '5 Dubai sites',              moat: 'U By Emaar, co-branded ENBD card',                 app: '500K+ · 4.1★', best: true },
+    { name: 'Roxy',       owner: 'Meraas / Dubai Holding', scale: '6+ Dubai sites',          moat: 'Tickit Rewards, design-led districts',              app: '100K+ · 2.2★' },
+    { name: 'Novo',       owner: 'ELAN / Gulf Film',   scale: '6 sites, contracting',        moat: 'Value pricing. Closed Ibn Battuta 2024.',           app: '— · 3.1★' },
+    { name: 'Cinemacity', owner: 'Atassi family',      scale: '6 sites, ~45–55 screens', moat: 'Prime Pictures distribution · the only licensed theatre in the UAE · Sharjah’s only IMAX', app: '10K+ · 3.2★', us: true }
+  ],
+  source: 'Owner corporate sites, Google Play and App Store listings, observed 6 August 2026. Screen counts partly self-reported and partly unpublished.',
+  read: 'The content implication is straightforward. Cinemacity cannot out-spend or out-scale VOX, and it cannot match loyalty ecosystems built on entire mall portfolios. What it has that none of them have is a set of genuinely singular rooms, a distribution arm in the family, and a licence. Those are the things we can make content about — so those are the things this strategy is built on.'
+};
+
+const ASSETS_MISSED = [
+  {
+    title: 'Prime Pictures',
+    body: 'The Atassi family’s distribution arm is the MENA agent for DreamWorks, Paramount and Sony Pictures. No other UAE exhibitor at this scale sits inside a distribution business. From a content point of view that is a production asset: potential access to talent, materials and moments that competitors have to buy.',
+    ask: 'We are not assuming anything here. We would want to understand with the client what this practically unlocks for content — talent access, asset windows, premiere coverage.'
+  },
+  {
+    title: 'The licence, and the rooms around it',
+    body: 'Fountain Views is the UAE’s only licensed theatre. Add Azul Lounge, the 1927 members’ club, Graffiti, Backlot, Starlight’s 500-seat live-events theatre and Theatre FIVE’s 29 seats, and there is more filmable material inside six Cinemacity venues than most brands generate in a year.',
+    ask: 'Both of these are content assets sitting unused. Neither appeared anywhere in the previous strategy.'
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   4 · OBJECTIVES
+   ------------------------------------------------------------------------ */
+const OBJECTIVES_NOTE = 'These are content and social objectives — the things this channel can be held accountable for. They are written to support Cinemacity’s commercial goals, not to replace them. Where a target depends on business data we do not hold, it is marked for the client to set.';
+
+const OBJECTIVES = [
+  {
+    n: '01',
+    title: 'Make the room the story',
+    body: 'Shift the content mix so that the majority of original output is about a specific Cinemacity room, format or experience — rather than about a film anyone can see anywhere.',
+    kpi: 'Share of monthly output tagged to a named room · saves per post · location-page sessions from social',
+    target: 'We propose a starting mix. CLIENT_TARGET to confirm.'
+  },
+  {
+    n: '02',
+    title: 'Turn attention into taps',
+    body: 'Improve the rate at which reach converts into a click toward booking. This is the number we can be judged on. What happens after the click is a shared responsibility — see Reel 03.',
+    kpi: 'Link tap rate as a share of views · profile-visit rate · Story link-sticker tap rate',
+    target: 'Baseline 0.067% of views (July 2026). Target to be agreed once the landing experience is fixed — moving it before then would be dishonest.'
+  },
+  {
+    n: '03',
+    title: 'Reach the audience the category ignores',
+    body: 'Build genuine, language-native reach among the UAE’s largest film-going communities, who currently see almost no cinema marketing addressed to them.',
+    kpi: 'Reach and engagement on language-specific content · shares · community creator participation',
+    target: 'CLIENT_TARGET, once the programming slate is confirmed.'
+  },
+  {
+    n: '04',
+    title: 'Give the account a reason to exist between releases',
+    body: 'Two of the five pillars are built to run at full strength in a week with no major release. The account should not go quiet when the slate does.',
+    kpi: 'Share of monthly reach from non-release content · saves and shares · returning-viewer rate',
+    target: 'CLIENT_TARGET'
+  },
+  {
+    n: '05',
+    title: 'Grow an audience that isn’t rented',
+    body: 'Platform reach decays and is not owned. Social should feed something more durable — a WhatsApp channel, event RSVPs, loyalty sign-ups. We can create the demand; the client owns the destination.',
+    kpi: 'Contacts generated per month from social · click-through on owned-channel prompts',
+    target: 'CLIENT_TARGET, subject to the client’s CRM and consent setup.'
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   5 · AUDIENCES BY OCCASION
+   ------------------------------------------------------------------------ */
+const OCCASIONS = [
+  {
+    name: 'The Opening Night Crowd',
+    who: 'Fandom-led, largely male, 18–34, heavily South Asian and Filipino. Books first-day, first-show and treats it as an event.',
+    motivation: 'Being there first, and being seen to be there first. Avoiding spoilers is a real, urgent driver.',
+    barrier: 'Does not know which Cinemacity room is the best room for the title, or whether Cinemacity even has it on day one.',
+    pillar: 'First Day, First Show',
+    moment: 'Release Thursday'
+  },
+  {
+    name: 'The Format Purist',
+    who: 'Skews male, 25–44, will travel across emirates for the right projection. Small in number, disproportionately vocal and influential.',
+    motivation: 'The film as it was meant to be seen. Screen size, sound, aspect ratio.',
+    barrier: 'Genuinely cannot find out from the website which screen is which, or what the technical specification is.',
+    pillar: 'The Room',
+    moment: 'Tentpole weekends'
+  },
+  {
+    name: 'The Night Out',
+    who: 'Couples and friend groups, 25–40, downtown Dubai and Abu Dhabi. The film is one component of an evening.',
+    motivation: 'A good evening. The cinema is the anchor, not the whole event.',
+    barrier: 'Does not know Cinemacity is licensed, or that Azul and 1927 exist. Competitors are restaurants, not cinemas.',
+    pillar: 'The Late Show',
+    moment: 'Thursday and Friday nights'
+  },
+  {
+    name: 'The Family Plan',
+    who: 'Parents with school-age children. Sharjah, Arabian Center, Rahmania. Decision made days in advance, price-sensitive.',
+    motivation: 'A reliable few hours that everyone will tolerate. Logistics matter more than the film.',
+    barrier: 'Total cost is opaque until checkout. Offers exist but cannot be redeemed online.',
+    pillar: 'The Room / House Rules',
+    moment: 'Weekends and school holidays'
+  },
+  {
+    name: 'The Late Decider',
+    who: 'The largest and least-served group. Decides within two hours of the screening, on a phone, often already out.',
+    motivation: 'Something to do, right now, nearby.',
+    barrier: 'Everything in the booking journey. This is the segment the current UX loses most completely.',
+    pillar: 'All — served by conversion fixes',
+    moment: 'Every day, 17:00–21:00'
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   6 · PLATFORMS
+   ------------------------------------------------------------------------ */
+const PLATFORMS = [
+  {
+    name: 'Instagram',
+    role: 'The decision platform',
+    priority: 'Lead',
+    audience: '92.3% of reach is non-followers. This is not a community — it is a discovery and consideration engine, and should be planned as one.',
+    brand: 'Make the room desirable. Every post should be answerable with “which room, and why.”',
+    formats: 'Reels for reach and rooms · carousels for saveable utility (best seats, what’s on, formats) · Stories for session-level link stickers',
+    posting: '5–7 per week. Reels-led. Every promotional post carries a session-specific destination, not the homepage.',
+    paid: 'Amplify proven organic formats only. Never boost an unmodified distributor asset — the evidence on that is conclusive.',
+    conversion: 'Primary source of link taps today. Should carry the deepest links once deep-linking exists.',
+    kpis: 'Link tap rate · saves · reach from non-followers · landing-to-session-select'
+  },
+  {
+    name: 'TikTok',
+    role: 'The search platform',
+    priority: 'Lead — and radically under-resourced',
+    audience: '60.8% of traffic came from search in July, up from 11.7% in February. People are typing “IMAX Sharjah” and film titles. This is an intent channel behaving like a video channel.',
+    brand: 'Answer the questions being typed. Say the location out loud, name the format, use the location tag, repeat keywords on screen and in voice.',
+    formats: 'Room walkthroughs · format explainers · first-day-first-show energy · staff POV · House Rules',
+    posting: '4–5 per week, native and fast. The account produced 11.3K views in July — this is the biggest untapped asset in the estate.',
+    paid: 'Spark Ads behind organic winners. Test cast and director fan targeting, which converts at over twice broad audiences.',
+    conversion: 'Highest-intent traffic in the mix. Deserves the best landing experience and currently gets the worst.',
+    kpis: 'Search share of traffic · new viewers · completion rate · profile-to-link rate'
+  },
+  {
+    name: 'YouTube',
+    role: 'The durable search asset',
+    priority: 'Support',
+    audience: '8.37m UAE ad reach. Currently orphaned — the channel exists and is not linked from cinemacity.ae at all.',
+    brand: 'Room tours and format explainers that rank permanently, plus Shorts reusing TikTok output.',
+    formats: 'One long-form room film per venue, refreshed annually · Shorts repost',
+    posting: 'Low intensity. Six anchor films, then Shorts at no marginal cost.',
+    paid: 'Not recommended in year one.',
+    conversion: 'Indirect. Wins the “best cinema in Abu Dhabi” style query for years.',
+    kpis: 'Impressions from search · average view duration on room films'
+  },
+  {
+    name: 'Facebook',
+    role: 'Reach, families, events',
+    priority: 'Maintain — and consolidate',
+    audience: 'Largest UAE ad reach of any platform at 9.7m. Skews older and more family-oriented, which suits Sharjah and Arabian Center.',
+    brand: 'Events for Starlight programming, family occasions, offers.',
+    formats: 'Events · offers · cross-posted Reels',
+    posting: 'Cross-post led. Do not originate here.',
+    paid: 'Main paid workhorse for reach and retargeting once the pixel is on the booking domain.',
+    conversion: 'Strong retargeting potential, currently unrealised.',
+    kpis: 'Event responses · cost per landing-page view · retargeting pool size',
+    flag: 'Three separate pages currently exist — cinemacityuae, CinemacityArabian and CinemacityZero6. This splits an already small audience, fragments retargeting pools and multiplies moderation. Consolidate or convert venue pages to Locations under one parent.'
+  },
+  {
+    name: 'WhatsApp',
+    role: 'The owned audience',
+    priority: 'New — recommended test',
+    audience: 'The channel nobody in the category is using, in the market where it is most used.',
+    brand: 'A Channel for release-day alerts, room-specific drops and members’ offers. This is how Cinemacity stops renting its audience.',
+    formats: 'Broadcast Channel · release alerts · Starlight event drops',
+    posting: 'Two to three broadcasts per week maximum.',
+    paid: 'Click-to-WhatsApp as a low-friction alternative to app download.',
+    conversion: 'Potentially the highest-intent owned channel available.',
+    kpis: 'Subscribers · broadcast click rate · bookings attributed to broadcast links',
+    flag: 'Requires client and legal confirmation on data handling and consent before launch.'
+  },
+  {
+    name: 'Snapchat',
+    role: 'Paid and geofilter only',
+    priority: 'Do not launch organically',
+    audience: '5.13m UAE ad reach is real, and the previous strategy was right that the category under-uses it.',
+    brand: 'But Cinemacity has no account, and its existing TikTok delivered 11.3K views in July. Adding a third organic channel to a team that cannot yet sustain two will fail by month three and take the rest of the plan with it.',
+    formats: 'Snap Map presence per venue · geofilters for openings and tentpoles · paid reach against 18–24',
+    posting: 'None organic.',
+    paid: 'Defined test budget, three months, against a stated cost-per-landing-page-view threshold. Kill or scale on the number.',
+    conversion: 'Unproven for this brand. Treat as an experiment with a budget cap.',
+    kpis: 'Cost per landing-page view versus Meta and TikTok benchmarks',
+    against: true
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   7 · THE FIVE PILLARS
+   Each pillar carries 2–4 video slots. Replace the ALL_CAPS placeholders.
+   ------------------------------------------------------------------------ */
+const PILLARS = [
+  {
+    id: 'the-room',
+    n: '01',
+    name: 'The Room',
+    line: 'Which room, and why.',
+    role: 'Consideration. This is the pillar that carries the platform — it makes the room, not the film, the thing people remember about Cinemacity’s feed.',
+    insight: 'Cinemacity’s single best-performing TikTok asset for months has not been a blockbuster — it has been a video about the Sharjah IMAX screen. The audience has already told us the room is the story. Meanwhile 60.8% of TikTok traffic arrives through search, from people typing formats and locations. The demand exists and the website answers it with “Please select a location.”',
+    territory: 'Technical, confident, slightly obsessive. The voice of someone who genuinely cares which speaker array is behind the screen. Closer to a hi-fi review than a cinema ad. No hype adjectives — specifications, and why they matter.',
+    includes: 'Every room in the estate treated as a character: Sharjah’s only IMAX, the 26-metre XXL at Al Qana, the Presidential, the Arthouse theatre, Starlight’s 500 seats, Theatre FIVE’s 29, Azul, the VIP and Club tiers. Format explainers. Seat guidance. Which room suits which film.',
+    formats: [
+      { name: 'Room Spec', desc: 'A single room, shot like a product. Screen size, speaker count, seat pitch, throw distance, read out plainly. Ends on the room’s name. One per room, refreshed annually.' },
+      { name: 'Best Seat In The House', desc: 'Where to actually sit in each room and why. Genuinely useful, highly saveable, and it makes Cinemacity the only chain that tells you the truth about row three.' },
+      { name: 'Which Room For This One', desc: 'A weekly recommendation tied to that week’s release. Turns the release calendar into a venue argument. Runs 52 weeks a year.' }
+    ],
+    executions: [
+      'Reel: a slow tracking shot of the Al Qana XXL screen with the specification appearing as clean type. No music bed until the last three seconds.',
+      'TikTok: “Sharjah has one IMAX. Here it is.” Shot handheld, spoken to camera, location said out loud twice for search.',
+      'Carousel: Best Seat In The House for all six venues — one slide per room, designed to be saved and returned to.',
+      'Story: a two-frame poll — XXL or IMAX for this weekend — with a session link sticker on the second frame.'
+    ],
+    production: 'Anamorphic-feel framing, long lenses, practical light from the screen itself. Rooms shot empty and dark. Type set in the deck’s mono face so specifications read as data, not marketing. Sound design matters more than music — record the room.',
+    platforms: 'TikTok lead (search), Instagram Reels and carousels for saves, YouTube for the durable long-form version.',
+    measurement: 'Saves per post · TikTok search share · location-page sessions from social. Premium-format share of social-sourced bookings would be the strongest read available, and needs client data to build.',
+    videos: [
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Long form · 16:9', platform: 'YouTube', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+    ]
+  },
+  {
+    id: 'fdfs',
+    n: '02',
+    name: 'First Day, First Show',
+    line: 'The rituals the category ignores.',
+    role: 'Awareness and cultural relevance. Reaches the largest under-served audience in the UAE cinema market.',
+    insight: '88.5% of UAE residents are expatriates and South Asians are roughly 62% of them. Malayalam has around 1.06m speakers here, Tamil 455,000. First Day First Show is a real, deeply-held ritual — opening day, first show, whistles, cutouts, the whole thing. Every UAE chain markets a generic English-language luxury proposition to a country whose largest film audience celebrates cinema more intensely than any other group in it. Nobody is speaking to them. Cinemacity, with Prime Pictures behind it, is better placed to than anyone.',
+    territory: 'Loud, warm, communal, genuinely fan-first. Not a brand observing a culture from outside — a brand that books the room and turns up. Language-native where it matters, never subtitled as an afterthought.',
+    includes: 'Opening-night crowd energy. Language-specific release calendars as a genuine service. Fan community collaboration. Regional star moments. The Arabic and Filipino equivalents of the same ritual. Cinema Akil-adjacent arthouse for the film-culture audience.',
+    formats: [
+      { name: 'The Countdown', desc: 'A recurring release-week format built around the specific title and the specific room, in the language of its audience. Not a trailer repost — an invitation to a night.' },
+      { name: 'First Show Energy', desc: 'The queue, the whistles, the applause, the moment the lights drop. Captured on opening night, published within hours. Documentary, not produced.' },
+      { name: 'What’s Releasing In Your Language', desc: 'A monthly service post — Malayalam, Tamil, Hindi, Telugu, Arabic, Tagalog releases with dates and rooms. Nobody else publishes this. It will be saved and shared constantly.' }
+    ],
+    executions: [
+      'Reel: the last sixty seconds before a first-day-first-show, no commentary, just the room filling and the sound rising.',
+      'TikTok: a fan community leader introducing the release in Malayalam, filmed in the lobby, captioned in English.',
+      'Carousel: the month’s South Indian releases with dates, rooms and booking links — pure utility.',
+      'Story takeover: handing the account to a fan community on a major release night.'
+    ],
+    production: 'Handheld, real light, real sound, minimal grade. This pillar must never look like it was art-directed. The only brand device is the frame edge and the room name.',
+    platforms: 'TikTok and Instagram Reels lead. Facebook for family and community reach. Stories for the live moments.',
+    measurement: 'Reach among non-followers · shares · opening-weekend booking share for the relevant titles · saves on calendar posts.',
+    flag: 'Requires client confirmation: which language titles Cinemacity actually programmes, and the release slate from Prime Pictures. This pillar is only as good as the programming behind it.',
+    videos: [
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: 'OPTIONAL_CREATOR_NAME', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+    ]
+  },
+  {
+    id: 'late-show',
+    n: '03',
+    name: 'The Late Show',
+    line: 'The night, not the film.',
+    role: 'Occasion. The pillar that shows Cinemacity as an evening rather than a screening — and the one that makes the venues themselves the content.',
+    insight: 'TikTok’s own research finds 72% of moviegoers attend with others. The decision is a negotiation about an evening, not a solo choice about a film. Cinemacity is the only UAE chain that can serve a drink in the auditorium, and it has Azul, 1927, Graffiti, Backlot and a 500-seat live-events theatre. Its real competitor on a Thursday night is not VOX — it is a restaurant.',
+    territory: 'Low light, late hours, adult. Confident rather than loud. This is the most premium-feeling pillar and the one that should look least like cinema marketing.',
+    includes: 'Azul and 1927. Licensed screenings. Starlight live programming — music, theatre, events. Live sport, building on Matchday, Together. Graffiti and Backlot. Late sessions. Private hire including Theatre FIVE.',
+    formats: [
+      { name: 'Double Feature', desc: 'A film paired with what to eat and drink around it, at a specific venue. Two halves of one night. Runs weekly and directly serves F&B attach.' },
+      { name: 'After The Credits', desc: 'What the room becomes once the film ends — Azul at midnight, the lounge, the bar. The part of the night nobody else can show.' },
+      { name: 'Matchday', desc: 'The established live-sport property, extended. Cricket is the largest opportunity in the window given the audience.' }
+    ],
+    executions: [
+      'Reel: Azul at 11pm — no dialogue, no titles until the last frame. Sold entirely on light and sound.',
+      'Instagram carousel: the Thursday night plan at Fountain Views, valet to last call, with times.',
+      'TikTok: what the 1927 members’ club actually is, filmed honestly — scarcity works when it is not oversold.',
+      'Story: a live-sport fixture with a booking sticker and the licensed-venue detail stated plainly.'
+    ],
+    production: 'Available light, deep shadow, warm highlights. Shallow depth of field. Music-led with real ambience underneath. Type minimal and small — this pillar earns its premium by restraint.',
+    platforms: 'Instagram lead. Facebook Events for Starlight programming. TikTok for the honest, unpolished version.',
+    measurement: 'Saves and shares on occasion content · event RSVPs and Facebook Event responses · licensed-venue page sessions from social. F&B attach on social-sourced bookings is the ideal read and depends on client data.',
+    videos: [
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Event film · 16:9', platform: 'Facebook / YouTube', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+    ]
+  },
+  {
+    id: 'second-weekend',
+    n: '04',
+    name: 'Second Weekend',
+    line: 'The window the distributor abandons.',
+    role: 'Sustain and advocacy. Extends the commercial life of every title after the marketing spend stops.',
+    insight: 'Distributors spend everything on opening weekend and go quiet. But 90.7% of viewers attend within thirty days, and research from TikTok, Cinema United and Comscore shows that fan conversation after opening weekend is precisely what flattens the second-weekend drop. Warner Bros reports creator content outperforming traditional advertising three to one. The exhibitor is the only party with a commercial interest in weekends two, three and four — and in this market nobody is working them.',
+    territory: 'Conversational, spoiler-aware, opinionated. The pillar where Cinemacity talks about films like a person rather than a listings page. It requires a point of view and the confidence to have one.',
+    includes: 'Post-credits and ending discussion in declared spoiler space. Audience verdicts captured on opening night and published on day four. Still-showing reminders tied to specific rooms. Re-release and repertory programming. Awards-season sustain.',
+    formats: [
+      { name: 'We Need To Talk About That Ending', desc: 'Clearly-flagged spoiler content published on day four, when the audience wants it and the distributor has stopped. The format the category is missing entirely.' },
+      { name: 'Verdict', desc: 'Audience reactions captured in the lobby on opening night, cut and published mid-week as social proof for late deciders. Replaces generic vox pops with a job to do.' },
+      { name: 'Still Showing', desc: 'A weekly reminder of what is still on, in which room, with a session link. Unglamorous, and it will drive bookings.' }
+    ],
+    executions: [
+      'Reel: a two-minute breakdown of a post-credits scene, spoiler card on frame one, published Monday.',
+      'TikTok: “We asked 40 people leaving the 9pm show to rate it out of 10” — fast cuts, real answers, published Tuesday.',
+      'Carousel: still showing this week, one slide per title, room named, link in bio pointed at the session.',
+      'Story: a Thursday poll on what to rewatch, with the answer bookable in the same tap.'
+    ],
+    production: 'Editorial and fast. Screen-recording and text-led formats are welcome here — this pillar should feel cheap to make and hard to ignore. Consistent spoiler-warning device.',
+    platforms: 'Instagram and TikTok equally. This is the pillar most likely to generate genuine comment threads.',
+    measurement: 'Comment volume and sentiment · shares · link taps on Still Showing · reach in weeks two and three versus week one. Week-by-week booking share would confirm it and requires client data.',
+    videos: [
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+    ]
+  },
+  {
+    id: 'house-rules',
+    n: '05',
+    name: 'House Rules',
+    line: 'The only thing everyone in a UAE cinema agrees on.',
+    role: 'Always-on brand personality. Keeps the account alive in empty release weeks and defends the theatrical experience against the sofa.',
+    insight: 'In July, the account’s single best-performing asset ever was an original pop-culture meme that reached two million views — far beyond anything a distributor asset has delivered. Entertainment content works. What it lacks is a point of view. The shared code of moviegoing — phones, talkers, latecomers, seat-kickers, the person who explains the plot — is the one cultural reference every one of the UAE’s two hundred nationalities holds in common. It is funny, endlessly renewable, and it lets Cinemacity have an opinion instead of a meme feed.',
+    territory: 'Dry, deadpan, institutional. Cinemacity as the house that has been doing this for eighty years and has views. Numbered rules, delivered straight. Never punching at the audience — always on the side of the people who came to watch the film.',
+    includes: 'The numbered House Rules series. Staff and usher perspectives. Cinema etiquette. The case for the big screen over the sofa. Reactive cultural moments, filtered through the same voice.',
+    formats: [
+      { name: 'House Rule No. __', desc: 'A numbered, escalating series. Each rule a single card or a six-second film. Instantly recognisable, infinitely extendable, and it builds a body of work rather than a stream of posts.' },
+      { name: 'Reported By Our Ushers', desc: 'Real things that happen in cinemas, told by the people who see them. Uses staff as content assets and gives the brand warmth.' },
+      { name: 'Sofa vs Screen', desc: 'The honest argument for the room, made without begging. The pillar’s commercial job, and the whole positioning in miniature.' }
+    ],
+    executions: [
+      'Static: House Rule No. 14 — set in the deck’s display face on black, no image. Designed to be screenshotted.',
+      'Reel: an usher describing the strangest thing found in a screen, straight to camera, no music.',
+      'TikTok: reacting to a trending audio in the voice of the house, without naming a title.',
+      'Carousel: the full rulebook so far — a recurring, growing artefact people will return to.'
+    ],
+    production: 'The most typographic pillar. Often no photography at all. When there is, it is real and unlit. This is where the visual system proves it can hold attention with nothing but type and black.',
+    platforms: 'Instagram for the static rulebook, TikTok for the performed version. The most shareable pillar in the system.',
+    measurement: 'Shares and saves · reach from non-followers · comment volume · share of monthly reach in weeks with no major release.',
+    videos: [
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'Reel · 9:16', platform: 'Instagram Reels', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' },
+      { title: 'VIDEO_TITLE', description: 'VIDEO_DESCRIPTION', format: 'TikTok · 9:16', platform: 'TikTok', credit: '', thumbnail: 'VIDEO_THUMBNAIL_URL', driveUrl: 'GOOGLE_DRIVE_VIDEO_URL', externalUrl: '' }
+    ]
+  }
+];
+
+/* ---------------------------------------------------------------------------
+   8 · UX AUDIT
+   ------------------------------------------------------------------------ */
+const UX_METHOD = {
+  scope: 'A note on what this chapter is, and what it is not. We are not proposing to redesign Cinemacity’s booking platform, and this is not a digital product roadmap — that is not our remit and we are not pretending otherwise. But every call to action we write sends someone somewhere, and we think it is worth knowing what happens when they arrive. This chapter is us following our own links to the end and reporting back honestly.',
+  observed: 'Public website, robots.txt, terms and offers pages, App Store and Google Play listings — all inspected 6 August 2026.',
+  notObserved: 'The live checkout could not be driven end to end. booking.cinemacity.ae is closed to automated access and no browser session was available. Nothing below claims to have been tested that was not.',
+  next: 'A moderated mobile walkthrough, a Lighthouse run and a GA4 funnel export would move most of the unverified items into observed fact within a day. We are happy to run that with whoever owns the platform.'
+};
+
+const UX_FINDINGS = [
+  {
+    id: 'A1', tier: 'observed', severity: 'critical',
+    title: 'There is no URL that means “book this film at this cinema”',
+    evidence: 'The “Book Tickets” control on a location page resolves to a same-page anchor, e.g. /our-locations/x110k-cinemacity-zero-6-mall-sharjah/#showtimes. Film pages carry clean permalinks but film-plus-cinema combinations are not addressable.',
+    hypothesis: 'Every social post, every paid ad and every creator link must land on a generic page, forcing the user to re-find the thing that just persuaded them.',
+    impact: 'It caps what every post and every paid dirham can achieve, no matter how good the creative is. If one thing on this list gets fixed, we would ask for this one.',
+    fix: 'Deep-linkable session URLs, or at minimum pre-filtered film-at-cinema landing pages. In the meantime we can build a link-in-bio router that carries film, cinema and format as far as the current site allows.',
+    user: 'Taps a post about IMAX and arrives at IMAX — not at a homepage asking which emirate they are in.',
+    business: 'It is the difference between content we can optimise and content we can only admire.'
+  },
+  {
+    id: 'A2', tier: 'observed', severity: 'critical',
+    title: 'App store reviews are dominated by registration and login failure',
+    evidence: 'Google Play: 3.2★ from 97 reviews. Verbatim reviews include “I couldn’t even create an account because the registration process keeps failing” and “I can’t even log in…I even tried resting my password. fix this”. iOS rating was recently reset so no aggregate is shown.',
+    hypothesis: 'If the same authentication service backs web checkout, a share of users who reach payment cannot complete. This is the most repeated complaint in the public record.',
+    impact: 'Lost purchases at the final step, where acquisition cost has already been fully spent.',
+    fix: 'Worth the ticketing team confirming whether web checkout shares the app’s authentication. We would flag it before recommending any increase in paid support.',
+    user: 'Buys a ticket without fighting a sign-up form.',
+    business: 'This is the one place where a media budget can be spent perfectly and still produce nothing.',
+    validate: 'Requires confirmation from the ticketing team.'
+  },
+  {
+    id: 'A3', tier: 'observed', severity: 'high',
+    title: 'Showtimes are invisible to search engines',
+    evidence: 'The site is a Gatsby 5.14.6 React build. Showtimes and film detail render client-side only; search engines have indexed /movies/*/ as a literal wildcard titled “Showtimes & Tickets”.',
+    hypothesis: 'Every high-intent “film name + cinema name” query is forfeited to aggregators and competitors.',
+    impact: 'Directly contradicts the strongest demand signal in the account — 60.8% of TikTok traffic is search-led. Demand is intent-driven and the website cannot be found by it.',
+    fix: 'Server-render or pre-render showtime and film pages. Add structured data for Movie, ScreeningEvent and Offer.',
+    user: 'Finds the session by searching for it, the way they already search on TikTok.',
+    business: 'Free, compounding, high-intent traffic at zero media cost.'
+  },
+  {
+    id: 'A4', tier: 'observed', severity: 'high',
+    title: 'The booking flow jumps to a different domain mid-purchase',
+    evidence: 'Ticketing hands off from www.cinemacity.ae to booking.cinemacity.ae/launch/ticketing/{uuid}, with an opaque UUID per session.',
+    hypothesis: 'A visible domain change mid-checkout is a well-documented trust and abandonment trigger, and it breaks analytics and pixel continuity unless explicitly configured.',
+    impact: 'Abandonment at the highest-intent moment, plus an inability to retarget or measure without cross-domain tracking.',
+    fix: 'Cross-domain measurement and pixel continuity as a minimum. Consistent visual identity across the handoff. Longer term, evaluate embedding or subdomain-consistent branding.',
+    user: 'Never feels handed off to a third party while entering card details.',
+    business: 'Reduced abandonment, and retargeting pools that actually exist.',
+    validate: 'Actual drop-off rate at the handoff requires a GA4 or Vista funnel export.'
+  },
+  {
+    id: 'A5', tier: 'observed', severity: 'high',
+    title: 'Visa and Mastercard only',
+    evidence: 'Terms state payment in AED by Visa or Mastercard. No Apple Pay, Google Pay, Tabby or Tamara found.',
+    hypothesis: 'In a market where 78.7% of e-commerce is smartphone-led and digital wallets carry 43.9% of payments, card-entry-only is a significant mobile drop-off.',
+    impact: 'Loses the Late Decider segment almost entirely — the person on a phone, already out, two hours before the show.',
+    fix: 'Add Apple Pay and Google Pay as priority one. Evaluate BNPL for premium and group bookings.',
+    user: 'Pays in two taps instead of typing a sixteen-digit number one-handed.',
+    business: 'Mobile conversion rate, and the segment with the highest impulse value.'
+  },
+  {
+    id: 'A6', tier: 'observed', severity: 'high',
+    title: 'Offers cannot be redeemed online',
+    evidence: 'The offers page lists Fazaa (20%) and Ministry of Education (22%). Both require physical ID at the box office.',
+    hypothesis: 'A promotional social post cannot be completed online. The campaign generates intent and then sends it to a counter.',
+    impact: 'Makes offer-led social activity unmeasurable and structurally lower-converting. Also caps the value of any discount campaign.',
+    fix: 'Online redemption with post-purchase verification, or a promo-code path. If the commercial policy cannot change, stop running offer-led acquisition on social.',
+    user: 'Gets the discount they were promised, at the moment they were promised it.',
+    business: 'Makes promotional media measurable and worth running.'
+  },
+  {
+    id: 'A7', tier: 'observed', severity: 'medium',
+    title: 'No food and beverage attach in the web ticket flow',
+    evidence: 'The FAQ describes in-cinema ordering only — seat QR code, VIP call button, or a kiosk on arrival. The Play Store listing says the app enables food ordering; the web flow shows no equivalent.',
+    hypothesis: 'The highest-margin add-on is absent from the highest-intent moment.',
+    impact: 'Foregone average order value on every web booking, and it undercuts The Late Show pillar directly.',
+    fix: 'Add an F&B step after seat selection with two or three curated combinations rather than a full menu.',
+    user: 'Sorts the whole evening in one transaction instead of queuing.',
+    business: 'Average order value, and margin — which matters more than volume in a market discounting its tickets.'
+  },
+  {
+    id: 'A8', tier: 'observed', severity: 'medium',
+    title: 'The location selector starts empty and is not remembered',
+    evidence: 'The /movies/ page defaults to “Please select a location”. No cinema is preselected and no preference appears to persist.',
+    hypothesis: 'Adds a decision before any value is delivered, on the very first screen after a social tap.',
+    impact: 'First-screen friction applied to 100% of inbound social traffic.',
+    fix: 'Remember last cinema, offer geolocation, or infer from the inbound link. Never show an empty state to arriving traffic.',
+    user: 'Sees showtimes immediately.',
+    business: 'Reduces the largest single drop-off point for new visitors.',
+    validate: 'Persistence behaviour across sessions requires manual confirmation.'
+  },
+  {
+    id: 'A9', tier: 'observed', severity: 'medium',
+    title: 'A legacy booking system is still publicly reachable',
+    evidence: 'vista.cinemacity.ae remains live and renders venues as “ABC Cinemacity Fountain Views” and “ABC Cinemas AlQana”.',
+    hypothesis: 'Stale branding on a live ticketing domain undermines trust and can be reached from historical links and search results.',
+    impact: 'Brand inconsistency at the point of payment, and a possible source of failed or duplicate bookings.',
+    fix: 'Redirect the legacy domain to current equivalents, or take it offline.',
+    user: 'Never lands on a system branded as a different company.',
+    business: 'Trust at checkout, and a cheap fix.'
+  },
+  {
+    id: 'A10', tier: 'observed', severity: 'enhancement',
+    title: 'Two social channels are orphaned and Facebook is fragmented',
+    evidence: 'The site footer links Facebook and Instagram only. TikTok and YouTube are not linked anywhere. Three Facebook pages exist: cinemacityuae, CinemacityArabian and CinemacityZero6.',
+    hypothesis: 'The fastest-growing channel in the account is invisible to website visitors, and the largest-reach platform is split three ways.',
+    impact: 'Lost follows, split retargeting pools, multiplied moderation load.',
+    fix: 'Link all active channels. Consolidate Facebook pages or convert venue pages to Locations under one parent.',
+    user: 'Can find the channel they actually use.',
+    business: 'A single addressable community instead of three fragments. Costs nothing.'
+  },
+  {
+    id: 'A11', tier: 'observed', severity: 'medium',
+    title: 'Tickets are strictly non-refundable and non-exchangeable',
+    evidence: 'Stated in the site terms.',
+    hypothesis: 'Likely to create hesitation around advance booking and group plans — which are exactly the behaviours the Countdown and Matchday formats are designed to encourage.',
+    impact: 'It limits how confidently we can write advance-booking calls to action. We would rather know the constraint than write around it badly.',
+    fix: 'Flagged for the commercial team, not a recommendation from us — this is a pricing and policy question, not a content one. We have noted it because it shapes what we can credibly promise.',
+    user: '—',
+    business: 'Affects the tone and confidence of every advance-booking message we write.'
+  },
+  {
+    id: 'B1', tier: 'hypothesis', severity: 'high',
+    title: 'Guest checkout availability is unknown',
+    evidence: 'Not determinable. The booking subdomain is closed to automated inspection and the terms and FAQ are silent.',
+    hypothesis: 'If an account is required, and registration is the top app complaint, this compounds finding A2 into the single largest loss in the funnel.',
+    impact: 'Potentially severe. Cannot be sized without access.',
+    fix: 'Confirm, then guarantee guest checkout on web.',
+    user: 'Buys without signing up.',
+    business: 'Unknown until measured — and worth measuring first.',
+    validate: 'Requires a manual mobile walkthrough. Fifteen minutes of work.'
+  },
+  {
+    id: 'B2', tier: 'hypothesis', severity: 'medium',
+    title: 'Step count and seat-map mobile usability are unverified',
+    evidence: 'Vista provides reserved seating and all venues sell assigned tiers, but the seat map itself was not inspected.',
+    hypothesis: 'Seat maps are a common mobile failure point — pinch-zoom, small targets, unclear tier pricing.',
+    impact: 'Unknown.',
+    fix: 'Assess after a walkthrough. Do not recommend changes to an interface nobody has seen.',
+    user: '—',
+    business: '—',
+    validate: 'Requires a moderated mobile session.'
+  },
+  {
+    id: 'C1', tier: 'instrument', severity: 'medium',
+    title: 'Page weight and Core Web Vitals are not measured',
+    evidence: 'No Lighthouse run was possible. We have deliberately put no performance numbers in this deck.',
+    hypothesis: 'A client-rendered React site delivering showtimes on the client is a common source of slow first meaningful paint on mobile networks.',
+    impact: 'Unknown and potentially significant, particularly for paid traffic.',
+    fix: 'Run Lighthouse on the top five inbound landing paths, mobile throttled, before any performance claim is made.',
+    user: '—',
+    business: '—',
+    validate: 'Requires instrumentation.'
+  }
+];
+
+const UX_ROADMAP_NOTE = 'Priorities, not instructions. We have grouped these by how much effort they appear to need, and we have separated what we can do ourselves from what we would need to ask for. The client and whoever owns the platform will know far better than us what is realistic.';
+
+const UX_ROADMAP = [
+  {
+    band: 'We can do these',
+    horizon: 'Weeks 1–4 · within our scope',
+    owner: 'INHAUS',
+    items: [
+      'Apply a consistent UTM standard to every social, creator and paid link',
+      'Build a link-in-bio router that carries film and cinema as deep as the current site allows',
+      'Point every call to action at the most specific page that exists, never the homepage',
+      'Consolidate the three Facebook pages, or convert venue pages to Locations',
+      'Establish the measurement baseline so any later improvement is provable'
+    ]
+  },
+  {
+    band: 'Small asks',
+    horizon: 'Weeks 1–8 · low effort, high return',
+    owner: 'Client / web team',
+    items: [
+      'Link TikTok and YouTube from the website footer',
+      'Preselect or remember the user’s cinema instead of an empty state',
+      'Redirect or retire the legacy vista.cinemacity.ae domain',
+      'Confirm whether guest checkout exists on web',
+      'Add cross-domain analytics and pixel continuity into booking.cinemacity.ae'
+    ]
+  },
+  {
+    band: 'Bigger asks',
+    horizon: 'Months 2–12 · for the platform roadmap',
+    owner: 'Client / ticketing partner',
+    items: [
+      'Deep-linkable film-at-cinema-at-session URLs — the one that unlocks everything else',
+      'Server-rendered or pre-rendered showtime pages, so search can find them',
+      'Apple Pay and Google Pay at checkout',
+      'Resolve the registration and login failures reported in app reviews',
+      'Food and beverage attach after seat selection',
+      'Online redemption for the Fazaa and Ministry of Education offers'
+    ]
+  }
+];
+
+/* UX evidence placeholders — swap `assetUrl` when screenshots arrive */
+const UX_EVIDENCE = [
+  { id: 'CURRENT_UX_SCREENSHOT',  label: 'Current landing experience from a social tap', ratio: '9 / 16',  assetUrl: '', note: 'Mobile, arriving from Instagram bio link' },
+  { id: 'UX_FRICTION_ANNOTATION', label: 'Annotated friction points',                    ratio: '9 / 16',  assetUrl: '', note: 'Location selector empty state and session path' },
+  { id: 'MOBILE_JOURNEY_VIDEO',   label: 'Mobile booking journey, screen recording',      ratio: '9 / 16',  assetUrl: '', note: 'Full attempt, film to payment', type: 'video' },
+  { id: 'IMPROVED_BOOKING_FLOW',  label: 'Recommended simplified flow',                   ratio: '16 / 9',  assetUrl: '', note: 'Deep link to session, guest checkout, wallet payment' }
+];
+
+/* ---------------------------------------------------------------------------
+   9 · RECURRING FORMATS GRID
+   ------------------------------------------------------------------------ */
+const FORMATS_GRID = [
+  { name: 'Which Room For This One', pillar: 'The Room',       cadence: 'Weekly',      platform: 'IG + TikTok', job: 'Venue decision' },
+  { name: 'Room Spec',               pillar: 'The Room',       cadence: 'Monthly',     platform: 'TikTok + YT', job: 'Search capture' },
+  { name: 'Best Seat In The House',  pillar: 'The Room',       cadence: 'Quarterly',   platform: 'IG carousel', job: 'Saves + utility' },
+  { name: 'The Countdown',           pillar: 'First Day',      cadence: 'Per release', platform: 'IG + TikTok', job: 'Opening weekend' },
+  { name: 'First Show Energy',       pillar: 'First Day',      cadence: 'Per release', platform: 'TikTok + IG', job: 'Reach + proof' },
+  { name: 'Releasing In Your Language', pillar: 'First Day',   cadence: 'Monthly',     platform: 'IG carousel', job: 'Utility + shares' },
+  { name: 'Double Feature',          pillar: 'The Late Show',  cadence: 'Weekly',      platform: 'Instagram',   job: 'F&B attach' },
+  { name: 'After The Credits',       pillar: 'The Late Show',  cadence: 'Fortnightly', platform: 'IG Reels',    job: 'Occasion + AOV' },
+  { name: 'Matchday',                pillar: 'The Late Show',  cadence: 'Per fixture', platform: 'All',         job: 'Event bookings' },
+  { name: 'Verdict',                 pillar: 'Second Weekend', cadence: 'Weekly',      platform: 'TikTok + IG', job: 'Social proof' },
+  { name: 'That Ending',             pillar: 'Second Weekend', cadence: 'Per tentpole',platform: 'IG + TikTok', job: 'Week 2 sustain' },
+  { name: 'Still Showing',           pillar: 'Second Weekend', cadence: 'Weekly',      platform: 'IG + Stories',job: 'Direct bookings' },
+  { name: 'House Rule No. __',       pillar: 'House Rules',    cadence: '2× weekly', platform: 'IG + TikTok', job: 'Reach + brand' },
+  { name: 'Reported By Our Ushers',  pillar: 'House Rules',    cadence: 'Fortnightly', platform: 'TikTok',      job: 'Warmth + staff' },
+  { name: 'Sofa vs Screen',          pillar: 'House Rules',    cadence: 'Monthly',     platform: 'IG + TikTok', job: 'Category defence' }
+];
+
+/* ---------------------------------------------------------------------------
+   10 · ANNUAL RHYTHM
+   ------------------------------------------------------------------------ */
+const CALENDAR = [
+  { month: 'Sep 2026', tier: 'build',  title: 'Reset and rebuild', notes: 'Schools return 31 Aug. Launch The Room and House Rules. Quick-win UX fixes shipped. Baseline measurement established.', films: '' },
+  { month: 'Oct 2026', tier: 'mid',    title: 'Horror season', notes: 'Genre converts hardest on social — horror shows the strongest measured lift of any category. Test paid behind Second Weekend.', films: 'Terrifier 4 · Street Fighter · The Last Airbender' },
+  { month: 'Nov 2026', tier: 'high',   title: 'The run-up', notes: 'Hunger Games 20 Nov. Narnia 26 Nov as an IMAX-exclusive engagement — a direct argument for the Zero6 room.', films: 'Sunrise on the Reaping · Narnia (IMAX)' },
+  { month: 'Dec 2026', tier: 'peak',   title: 'DUNESDAY', notes: 'The single most important date in the window. Avengers: Doomsday and Dune: Part Three release the same day, four days into the UAE winter break. Both IMAX and PLF-native — which is exactly Zero6 IMAX and the Al Qana XXL. National Day 2 Dec. Red Sea festival 3–12 Dec.', films: '18 Dec — Avengers: Doomsday + Dune: Part Three', flag: 'Marvel date moves have been rumoured. Monitor.' },
+  { month: 'Jan 2027', tier: 'mid',    title: 'Awards and arthouse', notes: 'Awards season sustain via Second Weekend. Arthouse theatre comes forward.', films: 'Children of Blood and Bone (IMAX)' },
+  { month: 'Feb 2027', tier: 'low',    title: 'Ramadan begins ~8 Feb', notes: 'A 30-day demand trough with a nightly post-iftar spike. Shift to late sessions, family suhoor occasions, and House Rules to hold reach without selling.', films: 'Ice Age: Boiling Point (5 Feb, inside Ramadan)' },
+  { month: 'Mar 2027', tier: 'peak',   title: 'Eid Al Fitr 10–12 Mar', notes: 'The single biggest local moviegoing peak, landing on a three-day weekend, then two tentpoles immediately after. Plan as one continuous fourteen-day campaign, not three.', films: 'Sonic 4 (19 Mar) · Godzilla x Kong: Supernova (26 Mar)' },
+  { month: 'Apr 2027', tier: 'mid',    title: 'Spring break from 5 Apr', notes: 'Family occasions. Star Wars 50th anniversary re-release is a repertory and format story — pure The Room territory.', films: 'A New Hope 50th (30 Apr)' },
+  { month: 'May 2027', tier: 'high',   title: 'Eid Al Adha 16–18 May', notes: 'Second Eid peak. Zelda releases 7 May into the run-up.', films: 'The Legend of Zelda · Star Wars: Starfighter' },
+  { month: 'Jun 2027', tier: 'mid',    title: 'Pre-summer', notes: 'Spider-Verse in IMAX. Schools finish 2 Jul — begin summer messaging in the last fortnight.', films: 'Beyond the Spider-Verse (IMAX) · Shrek 5' },
+  { month: 'Jul 2027', tier: 'high',   title: 'Summer', notes: 'The Escape The Heat window. Cinema as the default indoor destination. Family and group occasions lead.', films: 'A Minecraft Movie 2 · A Quiet Place Part III' },
+  { month: 'Aug 2027', tier: 'high',   title: 'Summer peak', notes: 'Bluey: The Movie on 6 Aug is a significant family moment. Schools return end of month.', films: 'Bluey: The Movie' },
+  { month: 'Sep–Nov 2027', tier: 'peak', title: 'Cricket + Batman', notes: 'ICC Men’s Cricket World Cup runs Oct–Nov in South Africa — evening UAE viewing, and the highest-relevance sporting property in the window given the audience. It collides with The Batman Part II on 1 Oct. Matchday and The Room both peak here.', films: 'The Batman Part II (IMAX, 1 Oct)' }
+];
+
+/* ---------------------------------------------------------------------------
+   11 · MEASUREMENT
+   ------------------------------------------------------------------------ */
+const METRICS_NOTE = 'Split deliberately into what we own, what we share, and what we report. We would rather be measured hard on the things we control than take credit for numbers we cannot influence.';
+
+const METRICS = [
+  {
+    tier: 'Tier 1 · Shared',
+    lens: 'What we contribute to — needs client data to see',
+    cadence: 'Monthly and quarterly',
+    ownership: 'Shared with the client',
+    items: [
+      { k: 'Bookings from social-tagged sessions', note: 'Requires UTM discipline from us plus a Vista-to-GA4 join from the client. Not currently possible for either party.' },
+      { k: 'Premium-format share of those bookings', note: 'The single best proof that the platform is working. We would want to see it; we cannot build it alone.' },
+      { k: 'F&B attach on social-sourced bookings', note: 'Depends on F&B existing at checkout in the first place.' },
+      { k: 'Cost per landing-page view, by channel', note: 'This one we can report today, and it is the honest paid efficiency metric until purchase tracking exists.' }
+    ]
+  },
+  {
+    tier: 'Tier 2 · Ours',
+    lens: 'What we own and act on weekly',
+    cadence: 'Weekly',
+    ownership: 'INHAUS accountable',
+    items: [
+      { k: 'Link tap rate as a share of views', note: 'Baseline 0.067%, July 2026. The number this whole strategy is trying to move.' },
+      { k: 'Landing-to-session-select rate',    note: 'Needs GA4 events on the booking path.' },
+      { k: 'Checkout start rate',               note: 'Needs cross-domain measurement.' },
+      { k: 'Saves per post',                    note: 'The best available proxy for purchase intent on Instagram.' },
+      { k: 'TikTok search share of traffic',    note: 'Live and already strong — 60.8% in July.' },
+      { k: 'Branded search volume',             note: 'Free, and a clean read on brand demand.' }
+    ]
+  },
+  {
+    tier: 'Tier 3 · Attention',
+    lens: 'Deliberately demoted',
+    cadence: 'Monthly',
+    items: [
+      { k: 'Reach and views',                   note: 'Necessary but not sufficient. 7m views produced 304 net followers.' },
+      { k: 'Completion and watch time',         note: 'Useful for creative optimisation only.' },
+      { k: 'Follower growth',                   note: 'Reported, not targeted. 92.3% of reach is non-followers — this is a discovery account.' },
+      { k: 'Engagement rate',                   note: 'Must be recalculated against reach, not followers. The current method produced 0.5% in March and 81% in June — an artefact, not a signal.' }
+    ]
+  },
+  {
+    tier: 'Community health',
+    lens: 'The qualitative read',
+    cadence: 'Monthly',
+    items: [
+      { k: 'Comment sentiment and volume',      note: 'Second Weekend and House Rules should move this first.' },
+      { k: 'DM and reply volume',               note: 'Often booking questions — a UX signal in disguise.' },
+      { k: 'Creator-sourced UGC volume',        note: 'The test of whether the creator layer is working.' },
+      { k: 'Owned-audience growth',             note: 'WhatsApp subscribers, loyalty sign-ups, event RSVPs.' }
+    ]
+  }
+];
+
+const SUCCESS_BANDS = [
+  { band: 'Success',        body: 'Link tap rate materially above the 0.067% July baseline, a majority of original output tied to a named room, and at least two recurring formats producing consistent saves without paid support.' },
+  { band: 'Underperforming',body: 'Reach holds or grows but link tap rate stays flat. That would tell us the content is working and the destination is not — and the conversation should move to the landing experience rather than to the content plan.' },
+  { band: 'Failure',        body: 'Reach falls and link taps stay flat, or the pillars are not produced at the stated cadence. In either case the honest diagnosis is capacity, not strategy, and we would recommend cutting to three pillars rather than running thin across five.' }
+];
+
+const BLINDSPOTS = [
+  { title: 'No social-to-booking attribution exists today', body: 'Nothing connects a post to a purchase. Until UTMs are applied consistently and Vista data can be joined to GA4, every conversion claim in this industry — including ours — is inference.', need: 'UTM standard + GA4/Vista join' },
+  { title: 'No pixel or events API on the booking domain', body: 'Meta CAPI and TikTok Events API cannot fire on a domain we do not measure. Without this, paid optimisation is limited to landing-page views rather than purchases.', need: 'Cross-domain pixel deployment' },
+  { title: 'Platform data will not agree with ticketing data', body: 'It never does. Set the expectation now: platform-reported conversions will overstate, last-click will understate, and the truth is a triangulation.', need: 'An agreed reporting convention' },
+  { title: 'No competitor benchmark data is reliable', body: 'Follower counts cannot be verified through automated means and we will not estimate them in front of a client. Manual, dated observation is the only honest method.', need: 'A quarterly manual audit with dated screenshots' },
+  { title: 'We have deliberately not set the client’s targets for them', body: 'Everything marked CLIENT_TARGET is a number that belongs to Cinemacity, not to us. We can propose content and channel targets the moment the commercial context is shared — inventing them here would be theatre.', need: 'A conversation, not a spreadsheet' }
+];
+
+/* ---------------------------------------------------------------------------
+   12 · CREATORS + PAID
+   ------------------------------------------------------------------------ */
+const CREATOR_PROGRAMME = {
+  headline: 'No UAE cinema chain runs a formal creator programme. That is the clearest white space we found.',
+  body: 'The evidence is strong and specific. Warner Bros reports creator content outperforming traditional advertising three to one. TikTok’s deterministic study across 38 theatrical campaigns found cast and director fan targeting converting at more than twice broad audiences. And yet in a market of six chains, none has built a standing creator relationship. Cinemacity does not need the biggest creators — it needs the right ones, repeatedly.',
+  tiers: [
+    { name: 'The Regulars',  who: 'Four creators, rotating monthly across film, food, family and comedy niches. Each assigned to a specific venue so coverage spreads across all six.', deal: 'Experience trade first. Paid only where it demonstrably works.', job: 'Consistent, native coverage. Borrowed reach with a named face.' },
+    { name: 'The Specialists', who: 'Language-community voices for First Day, First Show — Malayalam, Tamil, Tagalog, Arabic. Smaller followings, far higher trust.', deal: 'Paid. These are professionals with real communities.', job: 'The audience nobody else is reaching, reached credibly.' },
+    { name: 'The House',     who: 'Cinemacity staff — ushers, projectionists, F&B. The most under-used content asset in the business.', deal: 'Internal, with a clear opt-in and a small recognition budget.', job: 'Warmth and authority that no external creator can buy.' }
+  ],
+  measurement: 'Cost per landing-page view versus paid benchmarks. Creator-attributed link taps via unique UTMs. Content longevity. Repeat-collaboration rate as a quality signal.',
+  caution: 'The counter-evidence is real and worth stating: research presented at the European Film Market in 2026 found TikTok-driven traffic converting to ticket purchase at around 0.1%. Creators generate awareness reliably. They convert only when the destination is good — which is why this chapter comes after the UX one, not before it.'
+};
+
+const PAID_MODEL = [
+  { layer: 'Never', body: 'Boosting an unmodified distributor asset. The evidence is conclusive: 646,900 views and 41 likes. The distributor is already running that asset with a bigger budget.', tone: 'bad' },
+  { layer: 'Always', body: 'Amplifying organic winners. Any post that clears an agreed save or share threshold organically becomes a paid candidate. Let the audience choose the media plan.', tone: 'good' },
+  { layer: 'Always', body: 'Conversion campaigns behind The Room and The Late Show, optimised to landing-page views today and to purchases the moment the pixel reaches the booking domain.', tone: 'good' },
+  { layer: 'Test', body: 'Cast and director fan targeting on TikTok, which the deterministic research shows converting at over twice broad audiences. Three-title test, defined budget.', tone: 'test' },
+  { layer: 'Test', body: 'Snapchat as a paid and geofilter layer only, with a three-month budget cap and a stated cost-per-landing-page-view threshold. Scale or kill on the number.', tone: 'test' },
+  { layer: 'Build', body: 'Retargeting pools from the booking domain. Currently impossible. This is the highest-value paid media asset Cinemacity does not yet own.', tone: 'build' }
+];
+
+const NINETY_DAYS = [
+  { phase: 'Days 1–30', title: 'Fix the plumbing, launch two pillars', items: ['Ship every quick-win UX item', 'Apply the UTM standard across all channels', 'Launch The Room and House Rules', 'Establish the measurement baseline', 'Confirm guest checkout and the registration failure with the ticketing team'] },
+  { phase: 'Days 31–60', title: 'Add the pillars that need programming', items: ['Launch Second Weekend against a live tentpole', 'Confirm the language slate with Prime Pictures', 'Recruit the first four Regulars', 'Begin The Late Show around Starlight programming', 'Cross-domain measurement scoped with the digital team'] },
+  { phase: 'Days 61–90', title: 'Prove it before Dunesday', items: ['Launch First Day, First Show', 'First paid conversion tests live', 'WhatsApp channel test if legal clears it', 'Full Dunesday plan locked by 15 November', 'First quarterly read against the framework'] }
+];
+
+/* ---------------------------------------------------------------------------
+   13 · VISUAL SYSTEM
+   ------------------------------------------------------------------------ */
+const VISUAL_PRINCIPLES = [
+  { n: '01', title: 'The frame is the brand', body: 'Not a logo lockup applied to a distributor still. A consistent frame — edge, ratio, corner mark, room name — that turns any asset into a Cinemacity asset. This is how a chain with no production budget owns material it did not shoot.' },
+  { n: '02', title: 'The room is always named', body: 'Every asset states which room it belongs to. It is the positioning made operational, it feeds search, and it is the one rule that cannot be broken.' },
+  { n: '03', title: 'Type carries the voice', body: 'A display face for statements, a mono face for specification and metadata. The mono is what makes a screen size feel like a fact rather than a claim. Most House Rules content needs no image at all.' },
+  { n: '04', title: 'Black is the default', body: 'Cinema is a dark room. Light comes from the screen, not from the design. Bright, saturated layouts belong to malls and to competitors.' },
+  { n: '05', title: 'Each pillar has its own behaviour', body: 'One system, five temperaments. The Room is precise and cold. First Day is loud and handheld. The Late Show is warm and shallow. Second Weekend is fast and editorial. House Rules is pure type. Consistency lives in the frame, not in sameness.' },
+  { n: '06', title: 'Distributor assets get adapted, never reposted', body: 'Every studio asset enters the Cinemacity frame, gains a room name, and loses the distributor’s call to action in favour of ours. This is the single highest-volume application of the system.' }
+];
+
+const VISUAL_SYSTEM_EXAMPLES = [
+  { id: 'hero-campaign',    title: 'HERO_DESIGN_EXAMPLE',      type: 'image', platform: 'Instagram', format: '4:5 feed post',   aspectRatio: '4 / 5',  pillar: 'The Room',       assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'The system at full strength — room named, frame applied, type doing the work.' },
+  { id: 'feed-preview',     title: 'INSTAGRAM_FEED_PREVIEW',   type: 'image', platform: 'Instagram', format: '3×3 grid',  aspectRatio: '1 / 1',  pillar: 'All pillars',    assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Nine posts as one recognisable system across five different pillars.' },
+  { id: 'carousel',         title: 'CAROUSEL_DESIGN_EXAMPLE',  type: 'image', platform: 'Instagram', format: '4:5 carousel',   aspectRatio: '4 / 5',  pillar: 'The Room',       assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Best Seat In The House — the saveable utility format.' },
+  { id: 'story',            title: 'STORY_DESIGN_EXAMPLE',     type: 'image', platform: 'Stories',   format: '9:16 story',     aspectRatio: '9 / 16', pillar: 'Second Weekend', assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Session link sticker treatment — the conversion surface.' },
+  { id: 'reel-cover',       title: 'REEL_COVER_EXAMPLE',       type: 'image', platform: 'Instagram', format: '9:16 cover',     aspectRatio: '9 / 16', pillar: 'The Late Show',  assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Covers as a grid system, not an afterthought.' },
+  { id: 'tiktok-frame',     title: 'TIKTOK_FRAME_EXAMPLE',     type: 'image', platform: 'TikTok',    format: '9:16 frame',     aspectRatio: '9 / 16', pillar: 'First Day',      assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'On-screen text built for search as well as for reading.' },
+  { id: 'house-rules',      title: 'CONTENT_PILLAR_DESIGN',    type: 'image', platform: 'Instagram', format: '1:1 static',     aspectRatio: '1 / 1',  pillar: 'House Rules',    assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Type only, no image. Proof the system holds with nothing else.' },
+  { id: 'motion',           title: 'MOTION_DESIGN_VIDEO',      type: 'video', platform: 'Instagram Reels', format: '9:16 motion', aspectRatio: '9 / 16', pillar: 'The Room', assetUrl: '', thumbnailUrl: '', description: 'MOTION_DESCRIPTION', rationale: 'Frame-edge motion language and the room-name reveal.' },
+  { id: 'adaptation',       title: 'PAID_MEDIA_ADAPTATION',    type: 'image', platform: 'Meta / TikTok', format: '1:1 + 9:16', aspectRatio: '1 / 1',  pillar: 'The Room',       assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'One idea across feed, story and paid without redrawing it.' },
+  { id: 'before-after',     title: 'CURRENT_VS_PROPOSED_VISUAL',type:'image', platform: 'Comparison', format: '16:9',          aspectRatio: '16 / 9', pillar: '—',          assetUrl: '', description: 'DESIGN_DESCRIPTION', rationale: 'Optional. A current distributor repost beside the same title in the system.' }
+];
+
+/* ---------------------------------------------------------------------------
+   14 · THE SOCIAL-TO-BOOKING JOURNEY MAP
+   Split by who owns each stage. The point of the chapter is that our
+   accountability ends at the tap — and the tap is worth nothing on its own.
+   ------------------------------------------------------------------------ */
+const JOURNEY_MAP = [
+  {
+    owner: 'ours',
+    ownerLabel: 'Ours to influence',
+    title: 'On platform',
+    steps: [
+      { label: '2,501,103 views', note: 'Instagram, July 2026' },
+      { label: '~9,100 profile visits', note: '0.36% of views' },
+      { label: '1,665 bio link taps', note: '0.067% of views — the number we can be judged on' }
+    ]
+  },
+  {
+    owner: 'theirs',
+    ownerLabel: 'Not ours — but it decides everything',
+    title: 'On site',
+    steps: [
+      { label: 'Link-in-bio → cinemacity.ae', note: 'Lands on a generic page, not on the thing that persuaded them', breaks: true },
+      { label: '“Please select a location”', note: 'A decision before any value is delivered', breaks: true },
+      { label: 'Find film → find cinema → find session', note: 'Re-finding what the post already showed them' },
+      { label: 'Cross-domain jump to booking.cinemacity.ae', note: 'Opaque session URL, visible domain change mid-purchase', breaks: true },
+      { label: 'Seats → account → Visa or Mastercard only', note: 'Registration failure is the top complaint in app reviews', breaks: true },
+      { label: 'No food and beverage attach', note: 'The highest-margin add-on is absent from the highest-intent moment' }
+    ]
+  },
+  {
+    owner: 'unknown',
+    ownerLabel: 'Nobody can see this',
+    title: 'After',
+    steps: [
+      { label: 'Bookings', note: 'No attribution exists between a post and a purchase. Not for us, and not for the client.', breaks: true }
+    ]
+  }
+];

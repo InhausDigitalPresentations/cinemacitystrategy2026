@@ -84,22 +84,22 @@ const LEARNED = [
   {
     stat: '7.0M',
     label: 'views in seven months',
-    detail: 'Reach is not the problem. The account can put Cinemacity in front of large audiences, repeatedly, and July was its strongest month yet at 2.5 million views.'
+    detail: 'Reach is not the problem. July alone did 2.5 million views — the strongest month on record.'
   },
   {
     stat: '92%',
     label: 'of reach comes from non-followers',
-    detail: 'This is a discovery channel, not a community noticeboard. Most people meeting Cinemacity on social have never seen it before — so every post has to work as a first impression.'
+    detail: 'A discovery channel, not a noticeboard. Almost everyone meeting Cinemacity here is seeing it for the first time, so every post has to work as a first impression.'
   },
   {
     stat: '60.8%',
     label: 'of TikTok traffic now comes from search',
-    detail: 'Up from 11.7% in February. People are actively typing formats, locations and film titles. Demand is intent-led, and it is growing fast.'
+    detail: 'Up from 11.7% in February. People are typing formats, locations and film titles. Intent-led demand, growing fast.'
   },
   {
     stat: '1,665',
     label: 'taps toward booking in July',
-    detail: 'From 2.5 million views. Attention is being created at scale and very little of it is being carried forward. Closing that gap is the single biggest opportunity in the year ahead.'
+    detail: 'From 2.5 million views. We create attention at scale and carry very little of it forward. Closing that gap is the year’s biggest opportunity.'
   }
 ];
 
@@ -135,7 +135,7 @@ const CONTENT_PROOF = {
     { type: 'Distributor asset, organic', views: '66,100', likes: '527', rate: '0.8%' },
     { type: 'Distributor asset, boosted', views: '646,900', likes: '41', rate: '0.006%', bad: true }
   ],
-  reading: 'A boosted distributor asset reached 646,900 people and earned 41 likes. The same audience gave an original Cinemacity post 50,100. Distributor assets still have a job to do — they announce what is showing. But they cannot carry the brand, and paying to push them further does not make them work harder.'
+  reading: 'A boosted distributor asset reached 646,900 people and earned 41 likes. An original Cinemacity post earned 50,100. Distributor assets still announce what is showing — but they cannot carry the brand, and paying to push them further does not change that.'
 };
 
 /* ---------------------------------------------------------------------------
@@ -145,25 +145,25 @@ const MARKET = [
   {
     stat: '−8.3%',
     label: 'UAE box office value, 2024 to 2025',
-    detail: 'Admissions held steady while revenue fell. The category is competing hard on price — which is exactly why this strategy is built on what Cinemacity uniquely offers rather than on discounts.',
+    detail: 'Admissions held steady while revenue fell. The category is competing on price — which is why this strategy is built on what only Cinemacity offers.',
     source: 'UAE Media Council; National Media Authority via Gulf News, 2026.'
   },
   {
     stat: '79%',
     label: 'of UAE e-commerce happens on a phone',
-    detail: 'Everything here is designed vertical-first, for one hand, in the evening. That is not a style choice — it is where the audience is.',
+    detail: 'Everything here is designed vertical-first, for one hand, in the evening. Not a style choice — it is where the audience is.',
     source: 'Grand View Research / University of Sharjah, 2026.'
   },
   {
     stat: '72%',
     label: 'of cinema visits are group occasions',
-    detail: 'People rarely go alone. Cinema is a plan made with someone else, which means the content has to give them something to send, not just something to see.',
+    detail: 'Cinema is a plan made with someone else. The content has to give people something to send, not just something to see.',
     source: 'TikTok Marketing Science theatrical study, 2023.'
   },
   {
     stat: '90.7%',
     label: 'of viewers see a film in its first 30 days',
-    detail: 'Distributors spend almost everything on opening weekend. The weeks after are quiet, and they are still selling seats. One of our pillars lives there.',
+    detail: 'Distributors spend almost everything on opening weekend, then go quiet. Those weeks are still selling seats. One of our pillars lives there.',
     source: 'EntTelligence, 2025.'
   }
 ];
@@ -177,13 +177,13 @@ const COMPETITIVE = {
     { name: 'Novo',       owner: 'ELAN / Gulf Film',      scale: '6 sites',           angle: 'Value' },
     { name: 'Cinemacity', owner: 'Atassi family',                     scale: '6 sites',           angle: 'Rooms and experiences nobody else has', us: true }
   ],
-  read: 'Every competitor sells a version of the same thing: a comfortable seat, close to home. Cinemacity has something none of them can copy — Sharjah’s only IMAX, Abu Dhabi’s largest screen, the country’s only licensed auditorium, a 500-seat live theatre, private cinemas, real kitchens and real bars. That is the story worth telling all year.'
+  read: 'Every competitor sells the same thing: a comfortable seat, close to home. Cinemacity has what none of them can copy — Sharjah’s only IMAX, Abu Dhabi’s largest screen, the country’s only licensed auditorium, a 500-seat live theatre, private cinemas, real kitchens and real bars. That is the story worth telling all year.'
 };
 
 const ADVANTAGE = {
   title: 'A leverage worth maximising',
-  body: 'Cinemacity sits closer to film content than any comparable cinema brand in this market. Its distribution relationships mean material — stills, clips, talent, early assets — can reach the brand ahead of the market rather than alongside it.',
-  action: 'That is an advantage most exhibitors simply do not have, and there is real room to push it further. Being the first account in the UAE to post a piece of film content rather than the fifth is repeatable, costs nothing extra, and compounds every time it happens. The next step is mapping exactly what the access allows so we can build formats around it.'
+  body: 'Cinemacity sits closer to film content than any comparable cinema brand here. Distribution relationships mean stills, clips, talent and early assets can reach the brand ahead of the market rather than alongside it.',
+  action: 'Most exhibitors do not have that, and there is room to push it further. Being first to post a piece of film content rather than fifth is repeatable, costs nothing, and compounds every time. Next step: mapping exactly what the access allows, so we can build formats around it.'
 };
 
 /* ---------------------------------------------------------------------------
@@ -193,19 +193,19 @@ const OBJECTIVES = [
   {
     n: '01',
     title: 'Make the experience the story',
-    body: 'Shift the balance of original content toward Cinemacity’s own rooms, food and venues — the things that cannot be seen anywhere else.',
+    body: 'Shift original content toward Cinemacity’s own rooms, food and venues — the things that cannot be seen anywhere else.',
     kpi: 'Share of original output tied to a named venue or experience · saves per post · traffic to location pages'
   },
   {
     n: '02',
     title: 'Turn attention into intent',
-    body: 'Improve the rate at which views become taps toward booking. Reach is already strong; this is the number that matters next.',
+    body: 'Improve the rate at which views become taps toward booking. Reach is strong; this is the number that matters next.',
     kpi: 'Link taps as a share of views · Story link-sticker taps · profile visits'
   },
   {
     n: '03',
     title: 'Own the moments that matter',
-    body: 'Be first and be loudest on the handful of dates each year where the whole market is watching — and be genuinely useful in the weeks in between.',
+    body: 'Be first and loudest on the few dates the whole market is watching — and useful in the weeks between.',
     kpi: 'Reach and engagement during tentpole windows · share of voice against competitors'
   },
   {
@@ -217,7 +217,7 @@ const OBJECTIVES = [
   {
     n: '05',
     title: 'Build a recognisable brand',
-    body: 'One visual system, five distinct pillars, formats the audience learns to expect. Recognition is what turns reach into preference.',
+    body: 'One visual system, five pillars, formats the audience learns to expect. Recognition is what turns reach into preference.',
     kpi: 'Brand recall in comments and shares · follower quality · branded search volume'
   }
 ];
@@ -268,7 +268,7 @@ const OCCASIONS = [
   }
 ];
 
-const AUDIENCE_NOTE = 'A note on the wider market: the UAE is 88% expatriate, and after Arabic the largest language communities are South Asian. They are the second largest cinema audience in the country and Cinemacity already programmes for them. We are not proposing to change the brand’s voice — Cinemacity is a premium proposition and should stay one. It is simply worth knowing that a significant share of every audience above sits within that community.';
+const AUDIENCE_NOTE = 'A note on the wider market: the UAE is 88% expatriate, and after Arabic the largest language communities are South Asian — the country’s second largest cinema audience, already programmed for. We are not proposing to change the brand’s voice; Cinemacity is premium and should stay premium. It is simply worth knowing that a significant share of every audience above sits within that community.';
 
 /* ---------------------------------------------------------------------------
    6 · PLATFORMS
@@ -281,10 +281,10 @@ const PLATFORMS = [
     owner: 'INHAUS',
     cadence: '15 posts a month + 4 creator posts · Stories daily',
     mix: '6 Reels · static, animated and carousel · photography · 1 creator post a week',
-    audience: '92% of reach comes from people who do not follow the account. It works as a discovery platform, so every post has to earn attention on its own.',
+    audience: '92% of reach comes from non-followers. This is a discovery platform — every post has to earn attention on its own.',
     brand: 'The most considered surface. Rooms, food, venues and films, shot properly and framed consistently.',
     formats: 'Reels carry the reach · carousels carry the saveable ones · Stories carry the daily presence and the booking links',
-    posting: 'Roughly four a week, Reels-led. Release-week posts always point at the most specific booking page available, never the homepage.',
+    posting: 'Four a week, Reels-led. Release-week posts point at the most specific booking page available, never the homepage.',
     paid: 'Amplify what already works organically. Never boost an unmodified distributor asset.',
     kpis: 'Link taps · saves · reach from non-followers'
   },
@@ -310,12 +310,12 @@ const PLATFORMS = [
     cadence: '4–5 Stories a week · 3–6 snaps each',
     mix: 'In-venue phone content, plus experience and location Reels repurposed from Instagram',
     audience: 'Skews younger and more local than Instagram. It rewards being there over being polished.',
-    brand: 'The unfiltered version of Cinemacity — what the lobby looks like at 8pm on a Thursday, what the bar is making, who is queueing for what.',
+    brand: 'The unfiltered Cinemacity — the lobby at 8pm on a Thursday, what the bar is making, who is queueing for what.',
     formats: 'Daily Stories · repurposed experience and location Reels · Snap Map at all six venues · geofilters for openings and tentpoles',
-    posting: 'Same day, every time. Nothing planned more than 24 hours ahead — immediacy is the whole value of the channel.',
+    posting: 'Same day, every time. Nothing planned more than 24 hours ahead — immediacy is the value.',
     paid: 'A defined test budget across three months, measured against Meta and TikTok on cost per landing-page view.',
     kpis: 'Story completion · screenshots · link swipes · Snap Map views',
-    flag: 'Full direction on the next frame — this one is being run in-house, so it needs a brief that can be followed without us in the room.'
+    flag: 'Full direction on the next frame. Run in-house, so it needs a brief that works without us in the room.'
   },
   {
     name: 'Facebook',
@@ -324,13 +324,13 @@ const PLATFORMS = [
     owner: 'INHAUS',
     cadence: 'Cross-posted · events as needed',
     mix: 'Reels and stills reformatted from Instagram · an Event for every Starlight programme',
-    audience: 'The largest advertising reach of any platform in the UAE, skewing older and more family-led — which suits Sharjah and Arabian Center.',
+    audience: 'The largest advertising reach in the UAE, skewing older and more family-led — which suits Sharjah and Arabian Center.',
     brand: 'Events, family occasions and offers. Cross-posted rather than originated.',
     formats: 'Events · offers · cross-posted Reels',
     posting: 'No original production. Everything here comes from Instagram, reformatted.',
     paid: 'The main workhorse for reach and retargeting.',
     kpis: 'Event responses · cost per landing-page view',
-    flag: 'Three separate Cinemacity pages currently exist alongside the main one. Bringing them together would consolidate the audience and simplify everything that runs on the platform.'
+    flag: 'Three separate Cinemacity pages exist alongside the main one. Merging them consolidates the audience and simplifies everything on the platform.'
   },
   {
     name: 'YouTube',
@@ -339,7 +339,7 @@ const PLATFORMS = [
     owner: 'INHAUS',
     cadence: '2 Shorts a week',
     mix: 'One Short cut from that week’s Reel · one Short from distributor content',
-    audience: 'The second largest reach in the UAE, and currently not linked from the Cinemacity website at all.',
+    audience: 'The second largest reach in the UAE, and not linked from the Cinemacity website at all.',
     brand: 'Two Shorts a week at no extra production cost. They keep ranking for years after they are posted.',
     formats: 'Shorts from our Reels · Shorts from distributor material',
     posting: 'No original production. Every Short is a cut of something already made.',
@@ -350,7 +350,7 @@ const PLATFORMS = [
 
 /* Monthly production plan — what actually gets made */
 const MONTHLY_PRODUCTION = {
-  note: 'Everything below is built around six brand Reels a month. Those six travel across Instagram, TikTok, YouTube Shorts and Snapchat, which is what makes the volume achievable without thinning the quality. Creators add a fifth weekly touchpoint on top.',
+  note: 'Everything is built around six brand Reels a month, travelling across Instagram, TikTok, YouTube Shorts and Snapchat — which is what makes the volume achievable without thinning quality. Creators add a fifth weekly touchpoint.',
   rows: [
     { what: 'Brand Reels',        volume: '6 a month',            where: 'Instagram + TikTok',       owner: 'INHAUS' },
     { what: 'Instagram posts',    volume: '15 a month',           where: 'Instagram',                owner: 'INHAUS', detail: 'The six Reels plus static, animated, carousel and photography' },
@@ -366,37 +366,37 @@ const MONTHLY_PRODUCTION = {
    Written to be handed over and followed without further explanation.
    ------------------------------------------------------------------------ */
 const SNAPCHAT = {
-  intro: 'Snapchat will be run by Cinemacity’s own marketing team rather than by us, and that is the right call. This is the one platform where being in the building beats being in an edit suite. Everything below is the direction — what to post, when, and the rules that keep it on brand.',
+  intro: 'Snapchat will be run by Cinemacity’s own marketing team, and that is the right call — this is the one platform where being in the building beats being in an edit suite. Below is the direction: what to post, when, and the rules that keep it on brand.',
   why: [
-    { t: 'Why this platform', d: 'Snapchat’s UAE audience skews younger and more local than Instagram. It is also the only platform where content disappearing is an advantage — it lowers the bar for polish and raises the value of simply being present.' },
-    { t: 'Why in-house', d: 'What works here is same-day and unplanned: the queue, the bar, the room filling up. Nobody can shoot that on an agency schedule. Someone already in the venue can shoot it in four minutes.' },
+    { t: 'Why this platform', d: 'The UAE audience skews younger and more local than Instagram. It is also the only platform where content disappearing is an advantage: less polish needed, more value in simply being there.' },
+    { t: 'Why in-house', d: 'What works here is same-day and unplanned: the queue, the bar, the room filling up. Nobody shoots that on an agency schedule. Someone already in the venue shoots it in four minutes.' },
     { t: 'Why it is low risk', d: 'Nothing here needs to be perfect and nothing lives longer than twenty-four hours. It is the safest place in the mix to build confidence on camera.' }
   ],
   week: [
-    { day: 'Monday',    what: 'What’s opening this week',       how: 'Poster wall or lobby screens. Say the titles out loud, and say which venue you are in.' },
+    { day: 'Monday',    what: 'What’s opening this week',       how: 'Poster wall or lobby screens. Say the titles out loud, and name the venue.' },
     { day: 'Wednesday', what: 'Behind the counter',             how: 'Food coming out of the kitchen, a cocktail being made, the popcorn going in. Close, loud, unedited.' },
-    { day: 'Thursday',  what: 'Tonight at Cinemacity',          how: 'The busiest hour. The queue, the lounge, the room filling. The most important Story of the week.' },
+    { day: 'Thursday',  what: 'Tonight at Cinemacity',          how: 'The busiest hour — queue, lounge, the room filling. The most important Story of the week.' },
     { day: 'Weekend',   what: 'Whatever is actually happening', how: 'Events, matches, a full house, a birthday group. React to the day rather than plan it.' },
-    { day: 'Ad hoc',    what: 'Opening nights and events',      how: 'Any major first showing or Starlight event. Post it as it happens — no approval needed.' }
+    { day: 'Ad hoc',    what: 'Opening nights and events',      how: 'Any first showing or Starlight event. Post as it happens — no approval needed.' }
   ],
   rules: [
-    'Shoot vertically, on a phone. Never upload a finished polished asset here — it looks out of place and performs worse.',
-    'Name the venue in every Story, out loud or on screen. Six locations means the audience always needs to know which one they are seeing.',
+    'Shoot vertically, on a phone. Never upload a polished finished asset — it looks out of place and performs worse.',
+    'Name the venue in every Story, out loud or on screen. Six locations — the audience always needs to know which one.',
     'Add the location sticker every time. It is free reach and it feeds Snap Map.',
-    'Faces are welcome. Talking to camera works better here than anywhere else in the mix.',
+    'Faces are welcome. Talking to camera works better here than anywhere else.',
     'Keep each snap under ten seconds. If it needs longer, it belongs on TikTok.',
     'Finish every Story with a link to book. That is what the channel is for.',
     'Never post a distributor trailer. It will be skipped, and it makes the account look like an ad.',
     'Post the same day you shoot. A Thursday night Story posted on Friday is worth nothing.'
   ],
   setup: [
-    { t: 'Public Profile', d: 'So Stories can be found and saved, not only seen by existing followers.' },
+    { t: 'Public Profile', d: 'So Stories can be found and saved, not only seen by followers.' },
     { t: 'Snap Map',       d: 'A Place for all six venues, so anyone browsing the map nearby finds Cinemacity.' },
     { t: 'Geofilters',     d: 'One per venue as an always-on, plus title-specific filters for December and Eid.' },
-    { t: 'Spotlight',      d: 'Repost the best TikToks here. No extra production, and it is where new audiences come from.' }
+    { t: 'Spotlight',      d: 'Repost the best TikToks. No extra production, and it is where new audiences come from.' }
   ],
-  workflow: 'We share the month’s themes in advance and review the coming week every Monday. Anything reactive can go up immediately within the rules above — waiting for approval defeats the point of the channel. Performance is reviewed monthly alongside the rest of the mix.',
-  measure: 'Story completion rate · screenshots · link swipes · new followers · Snap Map views. Judged separately from Instagram and TikTok, because the job is different.'
+  workflow: 'We share the month’s themes in advance and review the week ahead every Monday. Anything reactive goes up immediately within the rules above — waiting for approval defeats the point. Performance reviewed monthly with the rest of the mix.',
+  measure: 'Story completion rate · screenshots · link swipes · new followers · Snap Map views. Judged separately from Instagram and TikTok — the job is different.'
 };
 
 /* ---------------------------------------------------------------------------
@@ -408,25 +408,25 @@ const PILLARS = [
     n: '01',
     name: 'Movies First',
     line: 'What are we showing?',
-    role: 'The backbone. Carries the release calendar — and carries it for the whole run, not just opening weekend.',
-    insight: 'Every cinema in the UAE posts the same distributor assets on the same morning, which is why they perform the way they do: a boosted trailer reached 646,900 people and earned 41 likes. What nobody publishes is a point of view — which films are worth the trip, what is coming, what is still on. That is the difference between a cinema brand and a listings account. It is also where the real gap sits: distributors spend everything on opening weekend and go quiet, while 90.7% of people see a film within thirty days.',
-    territory: 'Informed and genuinely enthusiastic. A programmer with taste, not a critic with a scorecard. Confident enough to recommend, never sneering.',
-    includes: 'The monthly line-up. Release-week content. Early material wherever access allows. Recommendations. Weeks two, three and four, when nobody else is talking. Endings and post-credits in clearly flagged spoiler space. Re-releases, repertory and the Arthouse programme. Awards season.',
+    role: 'The backbone. Carries the release calendar for the whole run, not just opening weekend.',
+    insight: 'Every cinema in the UAE posts the same distributor assets on the same morning. A boosted trailer reached 646,900 people and earned 41 likes. What nobody publishes is a point of view — what is worth the trip, what is coming, what is still on. That is the difference between a cinema brand and a listings account. And 90.7% of people see a film within thirty days, long after distributors go quiet.',
+    territory: 'Informed and enthusiastic. A programmer with taste, not a critic with a scorecard. Confident enough to recommend, never sneering.',
+    includes: 'The monthly line-up. Release-week content. Early material where access allows. Recommendations. Weeks two, three and four, when nobody else is talking. Endings and post-credits in flagged spoiler space. Re-releases, repertory and the Arthouse programme. Awards season.',
     formats: [
       { name: 'The Line-Up', desc: 'What is coming this month, with dates and rooms. Pure utility, highly saveable, and nobody else publishes it properly.' },
-      { name: 'Worth The Trip', desc: 'One release a week, and the honest case for seeing it on a big screen rather than waiting. The pillar’s point of view in a single post.' },
-      { name: 'Still Showing', desc: 'A weekly reminder of what is still on and in which room, in the weeks after the marketing noise stops. Unglamorous, and it will sell tickets.' }
+      { name: 'Worth The Trip', desc: 'One release a week, and the honest case for the big screen over waiting. The pillar’s point of view in a single post.' },
+      { name: 'Still Showing', desc: 'What is still on, and in which room, after the marketing noise stops. Unglamorous, and it sells tickets.' }
     ],
     executions: [
-      'Carousel: December’s line-up, one slide per title, dates and formats — designed to be saved and returned to.',
-      'Reel: sixty seconds on why a particular release belongs on the largest screen available.',
-      'TikTok: reacting to a trailer the morning it drops, with a real opinion rather than a repost.',
+      'Carousel: December’s line-up, one slide per title, dates and formats. Built to be saved.',
+      'Reel: sixty seconds on why a release belongs on the largest screen available.',
+      'TikTok: reacting to a trailer the morning it drops, with an opinion rather than a repost.',
       'Story: a three-frame countdown to a release, ending on a booking link.'
     ],
-    production: 'Distributor material always enters the Cinemacity frame, gains a venue name and carries our call to action rather than theirs. Never a plain repost.',
-    platforms: 'Instagram leads. TikTok for search and the faster, more opinionated version. Facebook for the family titles.',
+    production: 'Distributor material enters the Cinemacity frame, gains a venue name and carries our call to action. Never a plain repost.',
+    platforms: 'Instagram leads. TikTok for search and the faster, more opinionated cut. Facebook for family titles.',
     measurement: 'Saves on The Line-Up · reach in release weeks · link taps during opening windows · reach in weeks two and three.',
-    note: 'Cinemacity sits closer to film content than any comparable exhibitor in this market, and social has never used that. Being the first account in the UAE to post a piece of film material rather than the fifth is a real and repeatable advantage. Worth mapping exactly what that access allows before we build formats on it.',
+    note: 'Cinemacity sits closer to film content than any comparable exhibitor here, and social can maximise that. Being first to post a piece of film material rather than fifth is a real, repeatable advantage. Worth mapping what the access allows before we build formats on it.',
     videos: [
       { title: 'Distributor content 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
         thumbnail: 'https://drive.google.com/thumbnail?id=1loIH9DOXyuj8TiXU61T-Cs_obcenjf8G&sz=w480',
@@ -451,24 +451,24 @@ const PILLARS = [
     n: '02',
     name: 'Location & Experience',
     line: 'Where can you experience it?',
-    role: 'The pillar that separates Cinemacity from every other cinema in the country. Two halves: the rooms, and the table.',
-    insight: 'Cinemacity’s strongest original content has consistently been about its own venues — the Sharjah IMAX video has led TikTok for months, and with 60.8% of TikTok traffic now arriving from search, people are already typing formats and locations. The food is the half nobody knows about: proper kitchens, real cocktails, table service to the seat, licensed venues. On a Thursday night Cinemacity is not really competing with another cinema. It is competing with a restaurant, and it can win that comparison.',
-    territory: 'Two temperatures under one system. The rooms are precise and cool — specifications rather than adjectives, shot dark and wide. The table is warm and shallow-focus — food shot the way a restaurant would shoot it, not the way a cinema shoots snacks.',
-    includes: 'THE ROOMS — Sharjah’s only IMAX, the 26-metre XXL at Al Qana, the Presidential, VIP and Club Class, the Arthouse theatre, Starlight’s 500 seats, Theatre FIVE. Format explainers, seat guidance, which room suits which film. THE TABLE — the menus and the kitchen, cocktails and the bar, Azul, 1927, Graffiti, Backlot, table service, licensed screenings, live sport, private hire.',
+    role: 'What separates Cinemacity from every other cinema in the country. Two halves: the rooms, and the table.',
+    insight: 'Cinemacity’s strongest content has always been its own venues. The Sharjah IMAX video has led TikTok for months, and 60.8% of TikTok traffic now arrives from search. The food is the half nobody knows about: proper kitchens, real cocktails, table service to the seat, licensed venues. On a Thursday night Cinemacity is not competing with another cinema. It is competing with a restaurant — and it can win.',
+    territory: 'Two temperatures, one system. The rooms are precise and cool — specifications rather than adjectives, shot dark and wide. The table is warm and shallow-focus, shot the way a restaurant shoots food, not the way a cinema shoots snacks.',
+    includes: 'THE ROOMS — Sharjah’s only IMAX, the 26-metre XXL at Al Qana, the Presidential, VIP and Club Class, the Arthouse theatre, Starlight’s 500 seats, Theatre FIVE. Format explainers, seat guidance, which room suits which film. THE TABLE — menus and kitchen, cocktails and bar, Azul, 1927, Graffiti, Backlot, table service, licensed screenings, live sport, private hire.',
     formats: [
-      { name: 'Room Spec', desc: 'One room, shot like a product. Screen size, sound, seat, scale — stated plainly, ending on the room’s name.' },
-      { name: 'Best Seat In The House', desc: 'Where to actually sit in each room. Useful, saveable, and the kind of thing only the people who run the place can tell you.' },
+      { name: 'Room Spec', desc: 'One room, shot like a product. Screen, sound, seat, scale — stated plainly, ending on the room’s name.' },
+      { name: 'Best Seat In The House', desc: 'Where to actually sit in each room. Useful, saveable, and only the people who run the place can tell you.' },
       { name: 'Double Feature', desc: 'A film paired with what to eat and drink around it, at a named venue. Two halves of one night, every week.' },
-      { name: 'The Pour', desc: 'One cocktail, or one dish, made properly and in close-up. Short, beautiful, endlessly repeatable — and it says more about the brand than any caption could.' }
+      { name: 'The Pour', desc: 'One cocktail or one dish, made properly, in close-up. Short, beautiful, endlessly repeatable — and it says more than any caption could.' }
     ],
     executions: [
-      'Reel: a slow move across the Al Qana XXL screen, specification appearing as clean type, no music until the last seconds.',
+      'Reel: a slow move across the Al Qana XXL screen, specification in clean type, no music until the last seconds.',
       'Reel: a cocktail built end to end, forty seconds, no voiceover, sound design only.',
       'TikTok: “Sharjah has one IMAX. This is it.” Handheld, spoken to camera, location named twice.',
       'Carousel: the Thursday night plan at Fountain Views — arrival, table, film, last drink.'
     ],
-    production: 'Rooms: wide cinematic framing, shot empty and dark, lit by the screen itself, specifications set in the mono typeface so they read as fact. Food: available light, deep shadow, warm highlights, shallow focus on glassware and plates, steam and texture. One frame system holding both.',
-    platforms: 'Instagram leads for the food. TikTok leads for the rooms, because that is what people search. YouTube for the long-form venue films.',
+    production: 'Rooms: wide cinematic framing, shot empty and dark, lit by the screen, specifications set in the mono face so they read as fact. Food: available light, deep shadow, warm highlights, shallow focus on glassware and plates. One frame system holding both.',
+    platforms: 'Instagram leads for the food. TikTok for the rooms, because that is what people search. YouTube for the long-form venue films.',
     measurement: 'Saves per post · TikTok search share · traffic to location and menu pages · shares on food content.',
     videos: [
       { title: 'Location 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
@@ -538,23 +538,23 @@ const PILLARS = [
     n: '03',
     name: 'Entertainment & Culture',
     line: 'Why follow us, even off-season?',
-    role: 'Always-on personality. Keeps the account alive in the weeks when there is nothing to announce.',
-    insight: 'The account’s single best-performing post ever was an original pop-culture piece that reached two million views — far beyond any distributor asset. Entertainment content already works here. What it has been missing is a point of view. The shared etiquette of the cinema — phones, latecomers, talkers, seat-kickers, the person who explains the plot — is the one reference every audience in this country holds in common, and it belongs to a cinema brand more than to anyone else.',
-    territory: 'Dry, warm, deadpan. Cinemacity as the house that has been doing this a long time and has opinions. Always on the side of the people who came to watch the film, never punching at the audience.',
-    includes: 'The numbered House Rules series. Cinema etiquette. Film and pop culture with a Cinemacity angle. The case for the big screen over the sofa. Reactive cultural moments, filtered through the same voice. Trends, but only where the brand has something to say.',
+    role: 'Always-on personality. Keeps the account alive when there is nothing to announce.',
+    insight: 'The account’s best post ever was an original pop-culture piece at two million views, far beyond any distributor asset. Entertainment already works here; what it has been missing is a point of view. Cinema etiquette — phones, latecomers, talkers, seat-kickers, the person who explains the plot — is the one reference every audience here holds in common. It belongs to a cinema brand more than anyone.',
+    territory: 'Dry, warm, deadpan. The house that has been doing this a long time and has opinions. Always on the side of the people who came to watch the film.',
+    includes: 'The numbered House Rules series. Cinema etiquette. Film and pop culture with a Cinemacity angle. The case for the big screen over the sofa. Reactive cultural moments in the same voice. Trends, but only where the brand has something to say.',
     formats: [
-      { name: 'House Rules', desc: 'A numbered, growing series — one rule per post, delivered straight. Instantly recognisable, endlessly extendable, and it builds a body of work rather than a stream of posts.' },
-      { name: 'Sofa vs Screen', desc: 'The honest case for the room over the living room, made without begging. This pillar’s commercial job.' },
-      { name: 'Reactive', desc: 'Cultural and film moments answered in the house voice, within the day. The format that keeps the account feeling alive.' }
+      { name: 'House Rules', desc: 'A numbered, growing series — one rule per post, delivered straight. Instantly recognisable, endlessly extendable, and it builds a body of work.' },
+      { name: 'Sofa vs Screen', desc: 'The honest case for the room over the living room. This pillar’s commercial job.' },
+      { name: 'Reactive', desc: 'Cultural and film moments answered in the house voice, same day. The format that keeps the account alive.' }
     ],
     executions: [
-      'Static: House Rule No. 14, set in the display face on black, no image — designed to be screenshotted.',
+      'Static: House Rule No. 14, display face on black, no image — built to be screenshotted.',
       'TikTok: reacting to a trending sound in the voice of the house, without naming a title.',
       'Carousel: the rulebook so far — a recurring artefact people come back to.',
       'Reel: the five stages of the person who arrives during the opening scene.'
     ],
-    production: 'The most typographic pillar, often with no photography at all. When there is, it is real and unlit. Proof that the system holds attention with nothing but type and black.',
-    platforms: 'Instagram for the rulebook and the stills. TikTok for the performed version. The most shareable pillar in the system.',
+    production: 'The most typographic pillar, often with no photography at all. When there is, it is real and unlit. Proof the system holds attention with nothing but type and black.',
+    platforms: 'Instagram for the rulebook and stills. TikTok for the performed version. The most shareable pillar in the system.',
     measurement: 'Shares and saves · reach from non-followers · comments · share of monthly reach in weeks with no major release.',
     videos: [
       { title: 'Pop culture 01', description: '', format: 'Vertical · 9:16', platform: 'Instagram · TikTok', credit: '',
@@ -576,23 +576,23 @@ const PILLARS = [
     n: '04',
     name: 'People & Moments',
     line: 'Why does going to the movies matter?',
-    role: 'The human pillar. Turns Cinemacity from a venue into somewhere people recognise themselves.',
-    insight: 'Nearly three quarters of cinema visits are group occasions — cinema is something people do with someone else, and the memory is usually of the evening rather than the film. Meanwhile the people who work in these rooms see more of that than anyone, and they have never been on camera. Between the audience and the staff, Cinemacity has an enormous amount of genuine material that no competitor can copy and no distributor can supply.',
-    territory: 'Warm, real, unstaged. Faces and voices rather than production. This is the pillar that should feel like it was filmed on the night, because it was.',
-    includes: 'Audience reactions captured on opening night. Staff and usher perspectives. First dates, birthdays, groups, families. Opening nights and full houses. Starlight events and live sport crowds. The moments people would film themselves.',
+    role: 'The human pillar. Turns a venue into somewhere people recognise themselves.',
+    insight: 'Nearly three quarters of cinema visits are group occasions, and the memory is usually of the evening rather than the film. The people who work in these rooms see more of that than anyone, and have never been on camera. Between the audience and the staff, Cinemacity has material no competitor can copy and no distributor can supply.',
+    territory: 'Warm, real, unstaged. Faces and voices rather than production. It should feel like it was filmed on the night, because it was.',
+    includes: 'Audience reactions on opening night. Staff and usher perspectives. First dates, birthdays, groups, families. Full houses. Starlight events and live sport crowds. The moments people would film themselves.',
     formats: [
-      { name: 'Verdict', desc: 'Real reactions captured in the lobby on opening night, cut and published mid-week as proof for anyone still deciding.' },
-      { name: 'Ask The Usher', desc: 'The people who work in the rooms, telling real stories from them. Warmth, personality, and the most likeable content Cinemacity can make.' },
-      { name: 'Full House', desc: 'The room at its best — an opening night, a match, a Starlight event. The atmosphere is the product, and almost nobody films it.' }
+      { name: 'Verdict', desc: 'Real reactions from the lobby on opening night, published mid-week as proof for anyone still deciding.' },
+      { name: 'Ask The Usher', desc: 'The people who work in the rooms, telling real stories from them. The most likeable content Cinemacity can make.' },
+      { name: 'Full House', desc: 'The room at its best — an opening night, a match, a Starlight event. The atmosphere is the product, and nobody films it.' }
     ],
     executions: [
       'TikTok: “We asked forty people leaving the 9pm show to rate it out of ten.” Fast, real, published Tuesday.',
-      'Reel: an usher describing the strangest thing ever found in a screen, straight to camera.',
+      'Reel: an usher on the strangest thing ever found in a screen, straight to camera.',
       'Story: the room filling up before a first showing, posted live.',
       'Carousel: a night at Starlight, told in nine frames.'
     ],
-    production: 'Handheld, real light, real sound, minimal grade. This pillar must never look art-directed. The only brand device is the frame edge and the venue name.',
-    platforms: 'TikTok and Instagram Reels equally. Stories for the live moments. Snapchat carries the same energy in its own way.',
+    production: 'Handheld, real light, real sound, minimal grade. It must never look art-directed. The only brand device is the frame edge and the venue name.',
+    platforms: 'TikTok and Instagram Reels equally. Stories for live moments. Snapchat carries the same energy.',
     measurement: 'Comments and sentiment · shares · saves · participation in reactive formats · reach from non-followers.',
     videos: [
       { title: 'People & moments 01', description: '', format: 'Reel · 9:16', platform: 'Instagram', credit: '',
@@ -622,23 +622,23 @@ const PILLARS = [
     n: '05',
     name: 'Creator Seeding',
     line: 'Borrowed reach, on TikTok.',
-    role: 'A TikTok-first layer that puts Cinemacity in front of audiences the account cannot reach on its own.',
-    insight: 'No cinema brand in the UAE runs a proper creator programme, which is unusual and is an opening. Cinemacity does not need the biggest names — it needs the right people coming back regularly, so their audiences start associating them with the brand. Consistency beats scale, and a creator who visits four times is worth more than four creators who visit once.',
+    role: 'A TikTok-first layer, reaching audiences the account cannot reach on its own.',
+    insight: 'No cinema brand in the UAE runs a proper creator programme, which is an opening. Cinemacity does not need the biggest names — it needs the right people coming back, so their audiences start associating them with the brand. A creator who visits four times beats four creators who visit once.',
     territory: 'Native to whoever is making it. The brief is the venue and the experience, not the script. Creator content that looks like brand content defeats the point.',
     includes: 'Monthly creator visits across all six venues. Tentpole and event collaborations. Food and family creators as well as film ones. Reposting and amplifying the good ones.',
     formats: [
-      { name: 'The Regulars', desc: 'Four creators rotating monthly across film, food, family and comedy, each attached to a venue so coverage spreads across the whole estate.' },
-      { name: 'The Guests', desc: 'One-off collaborations around tentpoles, Starlight events and live sport. Paid, per activation, for scale at the moments that matter.' },
+      { name: 'The Regulars', desc: 'Four creators rotating monthly across film, food, family and comedy, each attached to a venue so coverage spreads across the estate.' },
+      { name: 'The Guests', desc: 'One-off collaborations around tentpoles, Starlight events and live sport. Paid per activation, for scale when it matters.' },
       { name: 'Seeded Reposts', desc: 'The strongest creator content amplified through the brand account and behind paid. Free production, proven performance.' }
     ],
     executions: [
       'A food creator eating their way through the Azul menu before a screening.',
-      'A film creator reviewing the Sharjah IMAX as a room rather than reviewing the film.',
+      'A film creator reviewing the Sharjah IMAX as a room, not the film.',
       'A family creator doing a school-holiday visit end to end.',
       'A comedy creator on cinema etiquette, filmed in an empty screen.'
     ],
-    production: 'Theirs, not ours. We provide the access, the venue and the angle. Light-touch guidelines only — the frame device is optional here, because the credibility comes from it not looking like an ad.',
-    platforms: 'TikTok first, with Instagram as secondary usage where rights allow. Spotlight on Snapchat for the best of it.',
+    production: 'Theirs, not ours. We provide access, venue and angle. Light-touch guidelines only — the frame device is optional, because the credibility comes from it not looking like an ad.',
+    platforms: 'TikTok first, Instagram as secondary usage where rights allow. Snapchat Spotlight for the best of it.',
     measurement: 'Cost per landing-page view against paid benchmarks · creator-attributed link taps · content longevity · repeat-collaboration rate.',
     videos: [
       { title: 'Creator seeding 01', description: '', format: 'Vertical · 9:16', platform: 'TikTok', credit: '',
@@ -681,12 +681,12 @@ const CAMPAIGNS = [
   {
     title: 'The Rooms',
     when: 'Across the year',
-    body: 'Cinemacity’s own campaign rather than a borrowed one. Six films, one per venue, released through the year as the backbone of The Room — Sharjah’s only IMAX, the 26-metre XXL, the Presidential, the Arthouse, Starlight’s 500 seats, Theatre FIVE. The one campaign no distributor calendar can move.'
+    body: 'Cinemacity’s own campaign, not a borrowed one. Six films, one per venue, released through the year as the backbone of The Room — Sharjah’s only IMAX, the 26-metre XXL, the Presidential, the Arthouse, Starlight’s 500 seats, Theatre FIVE. The one campaign no distributor calendar can move.'
   },
   {
     title: 'December',
     when: '18 December 2026',
-    body: 'Avengers: Doomsday and Dune: Part Three release on the same day, four days into the UAE winter break. Both are built for the largest screens available — which is exactly the Zero6 IMAX and the Al Qana XXL. The strongest argument for Cinemacity all year, handed to us. Plan it as one two-week event.'
+    body: 'Avengers: Doomsday and Dune: Part Three, same day, four days into the winter break. Both built for the largest screens available — the Zero6 IMAX and the Al Qana XXL. The strongest argument for Cinemacity all year, handed to us. Plan it as one two-week event.'
   },
   {
     title: 'Ramadan into Eid',
@@ -696,7 +696,7 @@ const CAMPAIGNS = [
   {
     title: 'Matchday',
     when: 'Live sport, year round',
-    body: 'Cinemacity has already proved this format. Big screens, licensed venues and proper food make it one of the few cinemas in the country that can host a match properly. It sits inside The Late Show and it works every time a major fixture lands.'
+    body: 'Already proved. Big screens, licensed venues and proper food make Cinemacity one of the few cinemas that can host a match properly. It sits inside The Late Show, and works every time a major fixture lands.'
   }
 ];
 
@@ -704,12 +704,12 @@ const CAMPAIGNS = [
    11 · PAID
    ------------------------------------------------------------------------ */
 const PAID_MODEL = [
-  { layer: 'Never',  body: 'Boosting an unmodified distributor asset. 646,900 views and 41 likes is the clearest evidence we have. The distributor is already running that asset with a bigger budget.', tone: 'bad' },
-  { layer: 'Always', body: 'Amplifying what already works. Any post that clears an agreed threshold organically becomes a paid candidate — the audience picks the media plan.', tone: 'good' },
+  { layer: 'Never',  body: 'Boosting an unmodified distributor asset. 646,900 views and 41 likes is the clearest evidence we have — and the distributor is already running it with a bigger budget.', tone: 'bad' },
+  { layer: 'Always', body: 'Amplifying what already works. Any post clearing an agreed organic threshold becomes a paid candidate — the audience picks the media plan.', tone: 'good' },
   { layer: 'Always', body: 'Conversion campaigns behind The Room and The Late Show, optimised to the strongest signal available on the booking journey.', tone: 'good' },
-  { layer: 'Test',   body: 'Film-specific fan targeting on TikTok, which converts significantly better than broad audiences in published theatrical studies. Three titles, defined budget.', tone: 'test' },
+  { layer: 'Test',   body: 'Film-specific fan targeting on TikTok, which converts better than broad audiences in published theatrical studies. Three titles, defined budget.', tone: 'test' },
   { layer: 'Test',   body: 'Snapchat as a paid and geofilter layer only, capped at three months and measured against Meta and TikTok.', tone: 'test' },
-  { layer: 'Build',  body: 'Retargeting audiences from people who reached the booking journey but did not finish. Currently the biggest untapped paid asset Cinemacity has.', tone: 'build' }
+  { layer: 'Build',  body: 'Retargeting people who reached the booking journey but did not finish. The biggest untapped paid asset Cinemacity has.', tone: 'build' }
 ];
 
 /* ---------------------------------------------------------------------------
@@ -723,17 +723,17 @@ const JOURNEY_STEPS = [
   { label: 'A ticket',              note: '', tone: 'end' }
 ];
 
-const BOOKING_MESSAGE = 'We can keep growing reach. We are good at it, and July proved it. But every post ends at the same handover, and how smooth that handover feels decides how much of the attention becomes a ticket. We looked at the journey from a phone, the way an audience arrives from Instagram. Five things stood out.';
+const BOOKING_MESSAGE = 'We can keep growing reach — July proved that. But every post ends at the same handover, and how smooth it feels decides how much attention becomes a ticket. We looked at the journey from a phone, the way an audience arrives from Instagram. Five things stood out.';
 
 const BOOKING_FINDINGS = [
   {
     title: 'Posts cannot link to a specific film at a specific cinema',
-    body: 'Social sends people to a general page, so they have to find the film again themselves. Being able to link straight to the session would lift the performance of every post and every campaign.',
+    body: 'Social sends people to a general page, so they have to find the film again. Linking straight to the session would lift every post and every campaign.',
     gain: 'The single highest-value change on this list.'
   },
   {
     title: 'The first screen asks a question before it gives anything',
-    body: 'Arriving from a post, the first thing shown is an empty location selector. Remembering the cinema, or carrying it through from the link, would remove a decision at the moment people are least patient.',
+    body: 'Arriving from a post, the first thing shown is an empty location selector. Remembering the cinema, or carrying it through the link, removes a decision at the moment people are least patient.',
     gain: 'Affects everyone arriving from social.'
   },
   {
@@ -743,29 +743,29 @@ const BOOKING_FINDINGS = [
   },
   {
     title: 'Food cannot be added while booking',
-    body: 'Given how good the food is, and that The Late Show is built around it, not being able to add it at the moment of booking leaves the best part of the offer out of the conversation.',
+    body: 'The food is a real part of the offer, and The Late Show is built around it. Not being able to add it while booking leaves the best part out of the conversation.',
     gain: 'Directly supports the food pillar.'
   },
   {
     title: 'Showtimes do not appear in search results',
-    body: 'When someone searches a film and a cinema together, Cinemacity’s pages are not what they find. With search now driving 60.8% of TikTok traffic, this is demand the brand is already creating and not capturing.',
+    body: 'Search a film and a cinema together and Cinemacity’s pages are not what comes back. With search driving 60.8% of TikTok traffic, this is demand the brand already creates and does not capture.',
     gain: 'Free, compounding traffic.'
   }
 ];
 
-const BOOKING_CLOSE = 'None of this changes what we make. It changes how much of it counts. We are happy to work through the detail with whoever looks after the platform — and in the meantime we will point every link at the most specific page that exists and tag everything properly so the impact is visible.';
+const BOOKING_CLOSE = 'None of this changes what we make. It changes how much of it counts. Happy to work through the detail with whoever looks after the platform. In the meantime we point every link at the most specific page that exists, and tag everything so the impact is visible.';
 
 /* ---------------------------------------------------------------------------
    13 · THE YEAR
    ------------------------------------------------------------------------ */
 const CALENDAR = [
-  { month: 'Sep 2026', tier: 'build', title: 'Launch', notes: 'Schools return. The Room and House Rules go live, the visual system rolls out, measurement baseline set.', films: '' },
+  { month: 'Sep 2026', tier: 'build', title: 'Launch', notes: 'Schools return. The Room and House Rules go live, visual system rolls out, baseline set.', films: '' },
   { month: 'Oct 2026', tier: 'mid',   title: 'Horror season', notes: 'The genre that travels furthest on social. First paid tests behind Second Weekend.', films: 'Terrifier 4 · Street Fighter' },
   { month: 'Nov 2026', tier: 'high',  title: 'The run-up', notes: 'Hunger Games on the 20th. Narnia arrives as an IMAX engagement on the 26th — a direct argument for Zero6.', films: 'Sunrise on the Reaping · Narnia' },
   { month: 'Dec 2026', tier: 'peak',  title: 'The biggest date of the year', notes: 'Avengers: Doomsday and Dune: Part Three on 18 December, four days into winter break. National Day on the 2nd.', films: '18 Dec — Doomsday + Dune: Part Three' },
   { month: 'Jan 2027', tier: 'mid',   title: 'Awards and arthouse', notes: 'Awards sustain through Second Weekend. The Arthouse theatre comes forward.', films: 'Children of Blood and Bone' },
-  { month: 'Feb 2027', tier: 'low',   title: 'Ramadan begins', notes: 'Quieter days, busy nights. Late sessions, family occasions and House Rules hold the account without selling hard.', films: 'Ice Age: Boiling Point' },
-  { month: 'Mar 2027', tier: 'peak',  title: 'Eid Al Fitr, 10–12 March', notes: 'The biggest local peak of the year on a three-day weekend, then two tentpoles straight after. One continuous fourteen-day plan.', films: 'Sonic 4 · Godzilla x Kong' },
+  { month: 'Feb 2027', tier: 'low',   title: 'Ramadan begins', notes: 'Quieter days, busy nights. Late sessions, family occasions and House Rules hold the account without hard selling.', films: 'Ice Age: Boiling Point' },
+  { month: 'Mar 2027', tier: 'peak',  title: 'Eid Al Fitr, 10–12 March', notes: 'The biggest local peak of the year, then two tentpoles straight after. One continuous fourteen-day plan.', films: 'Sonic 4 · Godzilla x Kong' },
   { month: 'Apr 2027', tier: 'mid',   title: 'Spring break', notes: 'Family occasions. The Star Wars 50th re-release is pure The Room territory.', films: 'A New Hope 50th' },
   { month: 'May 2027', tier: 'high',  title: 'Eid Al Adha, 16–18 May', notes: 'Second Eid peak, with Zelda releasing into the run-up.', films: 'The Legend of Zelda · Starfighter' },
   { month: 'Jun 2027', tier: 'mid',   title: 'Pre-summer', notes: 'Spider-Verse in IMAX. Summer messaging begins as schools finish.', films: 'Beyond the Spider-Verse · Shrek 5' },
@@ -802,17 +802,17 @@ const METRICS = [
     tier: 'Every quarter',
     lens: 'What we review together',
     items: [
-      { k: 'Bookings from social-tagged links', note: 'We will tag every link from day one so this becomes visible as soon as the data can be connected.' },
+      { k: 'Bookings from social-tagged links', note: 'Every link tagged from day one, so this becomes visible as soon as the data connects.' },
       { k: 'Cost per landing-page view by platform', note: 'The honest paid efficiency measure, comparable across channels.' },
-      { k: 'Format performance', note: 'Which recurring formats have earned their place and which should be replaced.' },
+      { k: 'Format performance', note: 'Which formats have earned their place, and which should be replaced.' },
       { k: 'Competitive share of voice', note: 'Reviewed manually each quarter, with dated evidence.' }
     ]
   }
 ];
 
-const METRICS_NOTE = 'Measured on what this channel can genuinely influence — and reported the same way every month, so progress is easy to see.';
+const METRICS_NOTE = 'Measured on what this channel can actually influence, and reported the same way every month.';
 
-const METRICS_FOOTNOTE = 'One change to how we report: engagement rate should be calculated against reach rather than followers. With 92% of reach coming from non-followers, the follower base is the wrong denominator and it makes month-to-month comparison unreliable.';
+const METRICS_FOOTNOTE = 'One change to how we report: engagement rate calculated against reach, not followers. With 92% of reach coming from non-followers, the follower base is the wrong denominator.';
 
 /* ---------------------------------------------------------------------------
    15 · FIRST 90 DAYS
@@ -827,12 +827,12 @@ const NINETY_DAYS = [
    16 · VISUAL SYSTEM
    ------------------------------------------------------------------------ */
 const VISUAL_PRINCIPLES = [
-  { n: '01', title: 'The frame is the brand', body: 'A consistent frame — edge, ratio, corner mark, venue name — that turns any asset into a Cinemacity asset. This is how the brand owns material it did not shoot.' },
+  { n: '01', title: 'The frame is the brand', body: 'A consistent frame — edge, ratio, corner mark, venue name — turns any asset into a Cinemacity asset. This is how the brand owns material it did not shoot.' },
   { n: '02', title: 'Always name the room', body: 'Every post says where it is. It makes the positioning real, it feeds search, and it is the one rule that never bends.' },
-  { n: '03', title: 'Type carries the voice', body: 'A display face for statements, a mono face for detail. The mono is what makes a screen size read as fact rather than a claim. Some posts need no image at all.' },
-  { n: '04', title: 'Black is the default', body: 'Cinema is a dark room. Light comes from the screen and from the food, not from the design. Bright saturated layouts belong to the competition.' },
+  { n: '03', title: 'Type carries the voice', body: 'A display face for statements, a mono face for detail. The mono is what makes a screen size read as fact, not a claim. Some posts need no image at all.' },
+  { n: '04', title: 'Black is the default', body: 'Cinema is a dark room. Light comes from the screen and the food, not the design. Bright saturated layouts belong to the competition.' },
   { n: '05', title: 'Five pillars, five temperaments', body: 'The Room is precise and cool. First Look is bright and current. The Late Show is warm and shallow-focus. Second Weekend is fast and editorial. House Rules is pure type. Consistency lives in the frame, not in sameness.' },
-  { n: '06', title: 'Adapt, never repost', body: 'Every distributor asset enters the Cinemacity frame, gains a venue name and carries our call to action. This is the highest-volume application of the system.' }
+  { n: '06', title: 'Adapt, never repost', body: 'Every distributor asset enters the Cinemacity frame, gains a venue name and carries our call to action. The highest-volume use of the system.' }
 ];
 
 const VISUAL_SYSTEM_EXAMPLES = [
@@ -846,7 +846,7 @@ const VISUAL_SYSTEM_EXAMPLES = [
     pillar: 'Location & Experience',
     assetUrl: 'assets/img/dsg-find.webp',
     alt: 'Find Your Cinemacity — an empty auditorium with all six venue names set across the frame',
-    rationale: 'The umbrella. Six venues named on one frame, so the estate reads as one brand containing six different nights rather than six separate cinemas.'
+    rationale: 'The umbrella. Six venues on one frame, so the estate reads as one brand with six different nights rather than six separate cinemas.'
   },
   {
     id: 'starlight',
@@ -858,7 +858,7 @@ const VISUAL_SYSTEM_EXAMPLES = [
     pillar: 'Location & Experience',
     assetUrl: 'assets/img/dsg-starlight.webp',
     alt: 'Starlight — red recliners and a lit table in the Cinemacity Starlight auditorium',
-    rationale: 'A room sold entirely on its own terms — the light, the recliner, the service. There is no film anywhere in the frame, which is the whole argument.'
+    rationale: 'A room sold on its own terms — the light, the recliner, the service. There is no film in the frame, which is the whole argument.'
   },
   {
     id: 'fountain-views',
@@ -870,7 +870,7 @@ const VISUAL_SYSTEM_EXAMPLES = [
     pillar: 'Location & Experience',
     assetUrl: 'assets/img/dsg-fountain.webp',
     alt: 'Fountain Views — a served food tray resting on a blue velvet cinema recliner',
-    rationale: 'Food shot the way a restaurant would shoot it, on the seat it is actually served to. This is the F&B half of the pillar in a single image.'
+    rationale: 'Food shot the way a restaurant would shoot it, on the seat it is served to. The F&B half of the pillar in one image.'
   },
   {
     id: 'horrors-greatest-hits',
@@ -882,7 +882,7 @@ const VISUAL_SYSTEM_EXAMPLES = [
     pillar: 'Movies First',
     assetUrl: 'assets/img/dsg-horror.webp',
     alt: 'Horror’s Greatest Hits — a misted house and lone figure, set for a seasonal season of films',
-    rationale: 'Programming as a reason to come rather than a listing. Proof the system can carry a seasonal idea without a distributor asset in sight.'
+    rationale: 'Programming as a reason to come, not a listing. Proof the system carries a seasonal idea with no distributor asset in sight.'
   }
 ];
 
